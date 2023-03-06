@@ -22,6 +22,14 @@ Route::get('/dashboard.admin', [App\Http\Controllers\Dashboard\AdminController::
 
 Route::get('/home', [App\Http\Controllers\ProductController::class, 'productList'])->name('products.list');
 
+//TypeProduct
+Route::get('type-product', [App\Http\Controllers\TypeProductController::class, 'index'])->name('type.product');
+Route::get('type-product-show/{id}', [App\Http\Controllers\TypeProductController::class, 'show'])->name('type-product.show');
+Route::post('type-product-store', [App\Http\Controllers\TypeProductController::class, 'store'])->name('store.type-product');
+Route::get('type-product-edit/{id}', [App\Http\Controllers\TypeProductController::class, 'edit'])->name('edit.type-product');
+Route::put('type-product-update', [App\Http\Controllers\TypeProductController::class, 'update'])->name('update.type-product');
+Route::get('update-status-type-product', [App\Http\Controllers\TypeProductController::class, 'updatestatus'])->name('updatestatus.type-product');
+
 // Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

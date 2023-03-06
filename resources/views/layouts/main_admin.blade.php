@@ -546,7 +546,7 @@
                             data-i18n="Todo"style="font-size: 18px; ">ตั้งค่า</span></a>
                     <ul class="menu-content">
                         <li class="{{ Request::routeIs('departsetting') ? 'active' : '' }} nav-item"><a
-                                href=""><i class="feather icon-circle" style="font-size: 1.2rem;"></i><span
+                                href="{{ route('type.product') }}"><i class="feather icon-circle" style="font-size: 1.2rem;"></i><span
                                     class="menu-item" data-i18n="Details">ประเภทสินค้า</span></a>
                         </li>
 
