@@ -22,6 +22,7 @@
         font-family: 'Kanit', sans-serif;
         font-weight: 600 !important;
     }
+<<<<<<< HEAD
 
 
     .navbar-floating .header-navbar-shadow {
@@ -35,6 +36,8 @@
             top: 0;
             z-index: 11;
         }
+=======
+>>>>>>> 9f3d3329d9e0de051e99732be4ccc727d6a93468
 </style>
 @section('content')
     <div class="app-content content">

@@ -14,6 +14,7 @@
             font-style: italic;
             border-color: red !important;
         }
+<<<<<<< HEAD
 
         .navbar-floating .header-navbar-shadow {
             display: block;
@@ -27,6 +28,8 @@
             z-index: 11;
         }
 
+=======
+>>>>>>> 9f3d3329d9e0de051e99732be4ccc727d6a93468
     </style>
 @endsection
 @section('content')

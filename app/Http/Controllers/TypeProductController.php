@@ -2,13 +2,22 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use Illuminate\Http\Request;
 use App\Models\TypeProduct;
+=======
+use App\Models\TypeProduct;
+use Illuminate\Http\Request;
+>>>>>>> 9f3d3329d9e0de051e99732be4ccc727d6a93468
 use Illuminate\Support\Facades\DB;
 
 class TypeProductController extends Controller
 {
+<<<<<<< HEAD
   /**
+=======
+    /**
+>>>>>>> 9f3d3329d9e0de051e99732be4ccc727d6a93468
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
