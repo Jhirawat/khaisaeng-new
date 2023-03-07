@@ -1,8 +1,7 @@
 @extends('layouts.main_admin')
 
-{{-- js --}}
+
 @section('head')
-    {{-- <title>เพิ่มพนักงาน</title> --}}
     <style>
         .navbar-floating .header-navbar-shadow {
             display: block;
@@ -16,7 +15,6 @@
             z-index: 11;
         }
     </style>
-    {{-- css --}}
 @endsection
 
 @section('content')

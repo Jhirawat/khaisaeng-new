@@ -521,6 +521,22 @@
                         </li> --}}
                     </ul>
                 </li>
+
+
+
+                <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a
+                    href="{{ route('dashboard.admin') }}"><i class="fa fa-truck"
+                        style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
+                        style="font-size: 18px">การจัดส่ง</span></a>
+            </li>
+
+            <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a
+                href="{{ route('dashboard.admin') }}"><i class="fa fa-file-text"
+                    style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
+                    style="font-size: 18px">รายการใบเสร็จ</span></a>
+        </li>
+
+
                 <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item">
                     <a href=""><i class="fa fa-line-chart"style="margin-top: 3px;"></i><span
                             class="menu-title" data-i18n="Calender"style="font-size: 18px; ">ยอดขาย
@@ -546,22 +562,26 @@
                             data-i18n="Todo"style="font-size: 18px; ">ตั้งค่า</span></a>
                     <ul class="menu-content">
                         <li class="{{ Request::routeIs('departsetting') ? 'active' : '' }} nav-item"><a
-                                href=""><i class="feather icon-circle" style="font-size: 1.2rem;"></i><span
+                            href="{{ route('type.product') }}"><i class="feather icon-circle" style="font-size: 1.2rem;"></i><span
                                     class="menu-item" data-i18n="Details">ประเภทสินค้า</span></a>
                         </li>
 
                         <li class="{{ Request::routeIs('tax') ? 'active' : '' }} nav-item"><a href=""><i
                                     class="feather icon-circle" style="font-size: 1.2rem;"></i><span
-                                    class="menu-item" data-i18n="Checkout">หน่วยนับสินค้า
+                                    class="menu-item" data-i18n="Checkout">หน่วยสินค้า
                                 </span></a>
                         </li>
                         <li class="{{ Request::routeIs('tax') ? 'active' : '' }} nav-item"><a href=""><i
                             class="feather icon-circle" style="font-size: 1.2rem;"></i><span
-                            class="menu-item" data-i18n="Checkout">ที่ตั้งวิศหกิจ
+                            class="menu-item" data-i18n="Checkout">การจัดส่งภายในจังหวัด
                         </span></a>
                         <li class="{{ Request::routeIs('tax') ? 'active' : '' }} nav-item"><a href=""><i
                             class="feather icon-circle" style="font-size: 1.2rem;"></i><span
-                            class="menu-item" data-i18n="Checkout">ใบเสร็จ
+                            class="menu-item" data-i18n="Checkout">การจัดส่งต่างจังหวัดจังหวัด
+                        </span></a>
+                        <li class="{{ Request::routeIs('tax') ? 'active' : '' }} nav-item"><a href=""><i
+                            class="feather icon-circle" style="font-size: 1.2rem;"></i><span
+                            class="menu-item" data-i18n="Checkout">ที่ตั้งวิศหกิจ
                         </span></a>
                 </li>
                     </ul>

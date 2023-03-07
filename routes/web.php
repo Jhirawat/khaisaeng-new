@@ -17,10 +17,23 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome')->name('homee');
 // });
 Route::get('/dashboard.admin', [App\Http\Controllers\Dashboard\AdminController::class, 'index'])->name('dashboard.admin');
-// Route::get('/home', [App\Http\Controllers\Dashboard\HomeController::class, 'index'])->name('home');
+
+
+Route::get('type-product', [App\Http\Controllers\TypeProductController::class, 'index'])->name('type.product');
+Route::get('type-product-show/{id}', [App\Http\Controllers\TypeProductController::class, 'show'])->name('type-product.show');
+Route::post('type-product-store', [App\Http\Controllers\TypeProductController::class, 'store'])->name('store.type-product');
+Route::get('type-product-edit/{id}', [App\Http\Controllers\TypeProductController::class, 'edit'])->name('edit.type-product');
+Route::put('type-product-update', [App\Http\Controllers\TypeProductController::class, 'update'])->name('update.type-product');
+Route::get('update-status-type-product', [App\Http\Controllers\TypeProductController::class, 'updatestatus'])->name('updatestatus.type-product');
+
+
+
 
 
 Route::get('/home', [App\Http\Controllers\ProductController::class, 'productList'])->name('products.list');
+Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'index'])->name('checkout');
+Route::get('/listorder', [App\Http\Controllers\ListOrderController::class, 'index'])->name('listorder');
+
 
 // Auth::routes();
 
@@ -36,7 +49,7 @@ Route::get('/home', [App\Http\Controllers\ProductController::class, 'productList
 
 
 // Route::get('cart', [App\Http\Controllers\CartController::class, 'index'])->name('cart');
-// Route::get('/pay', [App\Http\Controllers\PayController::class, 'index'])->name('pay');
+// Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'index'])->name('checkout');
 // Route::get('/order', [App\Http\Controllers\OrderController::class, 'index'])->name('order');
 // Route::get('/tracking', [App\Http\Controllers\TrackingController::class, 'index'])->name('tracking');
 // Route::get('/qrcode', [App\Http\Controllers\QRcodeController::class, 'index'])->name('qrcode');
