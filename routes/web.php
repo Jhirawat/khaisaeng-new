@@ -30,8 +30,8 @@ Route::get('type-product-edit/{id}', [App\Http\Controllers\TypeProductController
 Route::put('type-product-update', [App\Http\Controllers\TypeProductController::class, 'update'])->name('update.type-product');
 Route::get('update-status-type-product', [App\Http\Controllers\TypeProductController::class, 'updatestatus'])->name('updatestatus.type-product');
 
-
-
+//orderlist
+Route::get('/order.info', [App\Http\Controllers\OrderInfoController::class, 'index'])->name('order.info');
 
 
 Route::get('/home', [App\Http\Controllers\ProductController::class, 'productList'])->name('products.list');
@@ -41,8 +41,32 @@ Route::post('/store', [App\Http\Controllers\ProductController::class, 'store'])-
 Route::get('/admin-show', [App\Http\Controllers\ProductController::class, 'show'])->name('admin.show');
 Route::post('/admin-update', [App\Http\Controllers\ProductController::class, 'update'])->name('admin.update');
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('adminhome');
+
+
+
 //Admin monthly,yearly
 Route::get('/monthly', [App\Http\Controllers\MonthlyController::class, 'index'])->name('monthly.admin');
 Route::get('/yearly', [App\Http\Controllers\YearlyController::class, 'index'])->name('yearly.admin');
+
+
+
+//tracking
+Route::get('/tracking', [App\Http\Controllers\TrackingController::class, 'index'])->name('tracking');
+
+
+//bill
+Route::get('/bill', [App\Http\Controllers\BillController::class, 'index'])->name('bill');
+
+
+
+//address
+Route::get('address', [App\Http\Controllers\AddressController::class, 'index'])->name('address');
+Route::get('address-show/{id}', [App\Http\Controllers\AddressController::class, 'show'])->name('show.address');
+Route::post('address-store', [App\Http\Controllers\AddressController::class, 'store'])->name('store.address');
+Route::get('address-edit/{id}', [App\Http\Controllers\AddressController::class, 'edit'])->name('edit.address');
+Route::put('address-update', [App\Http\Controllers\AddressController::class, 'update'])->name('update.address');
+
+
+
 
 
