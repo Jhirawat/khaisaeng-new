@@ -22,15 +22,17 @@
     <div class="header-navbar-shadow"></div>
     <div class="content-wrapper">
         <div class="content-header row">
-            {{-- start form --}}
-            <div class="col-lg-12 col-md-12">
+             <!-- Doughnut Chart -->
+             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">ยอดขายรายเดือน</h4>
+                        <h4 class="card-title">Doughnut Chart</h4>
                     </div>
                     <div class="card-content">
                         <div class="card-body">
-                            <div id="column-chartt"></div>
+                            <div class="height-300">
+                                <canvas id="simple-doughnut-chart"></canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -44,6 +46,44 @@
 
 @section('script')
 <script>
+ // Doughnut Chart
+  // ---------------------------------------------
+
+  //Get the context of the Chart canvas element we want to select
+  var doughnutChartctx = $("#simple-doughnut-chart");
+
+  // Chart Options
+  var doughnutchartOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    responsiveAnimationDuration: 500,
+    title: {
+      display: true,
+      text: 'Predicted world population (millions) in 2050'
+    }
+  };
+
+  // Chart Data
+  var doughnutchartData = {
+    labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+    datasets: [{
+      label: "My First dataset",
+      data: [2478, 5267, 734, 784, 433],
+      backgroundColor: themeColors,
+    }]
+  };
+
+  var doughnutChartconfig = {
+    type: 'doughnut',
+
+    // Chart Options
+    options: doughnutchartOptions,
+
+    data: doughnutchartData
+  };
+
+  // Create the chart
+  var doughnutSimpleChart = new Chart(doughnutChartctx, doughnutChartconfig);
 
 </script>
 @endsection
