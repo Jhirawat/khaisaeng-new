@@ -26,7 +26,7 @@
             <div class="col-lg-12 col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Tracking</h4>
+                        <h4 class="card-title">ยอดขายรายเดือน</h4>
                     </div>
                     <div class="card-content">
                         <div class="card-body">

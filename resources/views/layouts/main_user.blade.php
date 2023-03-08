@@ -491,18 +491,18 @@
                 style="margin-top: 18px; font-family: 'Kanit', sans-serif; font-weight:800;">
                 {{-- <li class=" navigation-header"><span>Dashboard</span>
                 </li> --}}
-                <li class="{{ Request::routeIs('dashboard.admin') ? 'active' : '' }} nav-item"><a
-                        href="{{ route('dashboard.admin') }}"><i class="bi bi-house-door-fill"
+                <li class="{{ Request::routeIs('products.list') ? 'active' : '' }} nav-item"><a
+                        href="{{ route('products.list') }}"><i class="bi bi-house-door-fill"
                             style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
                             style="font-size: 18px">หน้าหลัก</span></a>
                 </li>
                 <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a
-                    href="{{ route('dashboard.admin') }}"><i class="fa fa-shopping-basket"
+                    href="{{ route('products.list') }}"><i class="fa fa-shopping-basket"
                         style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
                         style="font-size: 18px">ตะกร้าสินค้า</span></a>
             </li>
             <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a
-                href="{{ route('dashboard.admin') }}"><i class="fa fa-map-marker"
+                href="{{ route('products.list') }}"><i class="fa fa-map-marker"
                     style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
                     style="font-size: 18px">ที่อยู่</span></a>
         </li>
