@@ -26,6 +26,13 @@ Route::get('type-product-edit/{id}', [App\Http\Controllers\TypeProductController
 Route::put('type-product-update', [App\Http\Controllers\TypeProductController::class, 'update'])->name('update.type-product');
 Route::get('update-status-type-product', [App\Http\Controllers\TypeProductController::class, 'updatestatus'])->name('updatestatus.type-product');
 
+Route::get('address', [App\Http\Controllers\AddressController::class, 'index'])->name('address');
+Route::get('address-show/{id}', [App\Http\Controllers\AddressController::class, 'show'])->name('show.address');
+Route::post('address-store', [App\Http\Controllers\AddressController::class, 'store'])->name('store.address');
+Route::get('address-edit/{id}', [App\Http\Controllers\AddressController::class, 'edit'])->name('edit.address');
+Route::put('address-update', [App\Http\Controllers\AddressController::class, 'update'])->name('update.address');
+
+
 
 
 
