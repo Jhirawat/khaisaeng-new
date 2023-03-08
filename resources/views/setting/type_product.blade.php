@@ -22,6 +22,20 @@
         font-family: 'Kanit', sans-serif;
         font-weight: 600 !important;
     }
+<<<<<<< HEAD
+
+
+    .navbar-floating .header-navbar-shadow {
+            display: block;
+            background: linear-gradient(180deg, #524f4f00 44%, rgb(248 248 248 / 0%) 73%, rgba(255, 255, 255, 0))!important;
+            padding-top: 2.2rem;
+            background-repeat: repeat;
+            width: 100%;
+            height: 102px;
+            position: fixed;
+            top: 0;
+            z-index: 11;
+        }
 </style>
 @section('content')
     <div class="app-content content">

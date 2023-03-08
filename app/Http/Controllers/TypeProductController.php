@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\TypeProduct;
 use Illuminate\Http\Request;
+use App\Models\TypeProduct;
 use Illuminate\Support\Facades\DB;
 
 class TypeProductController extends Controller
 {
-    /**
+  /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response

@@ -14,6 +14,19 @@
             font-style: italic;
             border-color: red !important;
         }
+
+        .navbar-floating .header-navbar-shadow {
+            display: block;
+            background: linear-gradient(180deg, #524f4f00 44%, rgb(248 248 248 / 0%) 73%, rgba(255, 255, 255, 0))!important;
+            padding-top: 2.2rem;
+            background-repeat: repeat;
+            width: 100%;
+            height: 102px;
+            position: fixed;
+            top: 0;
+            z-index: 11;
+        }
+
     </style>
 @endsection
 @section('content')
@@ -33,7 +46,7 @@
                                 <h1 class="m-0" style="color:#555555;font-family: 'Kanit', sans-serif; font-weight:600;">
                                     <img src="{{ asset('images/tax2.png') }}" class="mr-2"
                                         style="height: 54px;
-                                        width: 52px;">ใบแจ้งเงินเดือน
+                                        width: 52px;">ที่ตั้งวิสาหกิจ
                                 </h1>
                             </div>
                         </div><!-- /.col -->
@@ -45,19 +58,20 @@
                             <div class="card">
                                 <div class="card-content">
                                     <div hidden>
-                                        @foreach ($slip as $slip)
+                                        {{-- @foreach ($slip as $slip)
                                             {{ $slip->id }}
                                             {{ $slip->pay_company }}
                                             {{ $slip->pay_id }}
                                             {{ $slip->pay_address }}
-                                        @endforeach
+                                        @endforeach --}}
                                     </div>
                                     <div class="card-body">
-                                        <form action="{{ route('update.tax',$slip->id) }}" method="POST"
+                                        {{-- <form action="{{ route('update.tax',$slip->id) }}" method="POST" --}}
+                                            <form action="" method="POST"
                                             enctype="multipart/form-data" novalidate>
                                             @csrf
                                             @method('PUT')
-                                            @include('sweetalert::alert')
+
                                             <div class="form-body">
                                                 <div class="row">
                                                     <div class="col-lg-3 col-sm-4">
@@ -74,7 +88,7 @@
                                                             <fieldset
                                                                 class="form-group position-relative has-icon-left input-divider-left">
                                                                 <input type="text" placeholder="ชื่อบริษัท"
-                                                                    class="form-control" value="{{ $slip->pay_company }}"
+                                                                    class="form-control" value=""
                                                                     name="pay_company">
                                                                 <div class="form-control-position">
                                                                     <i class="bi bi-building"></i>
@@ -97,7 +111,7 @@
                                                                     style="color: red">*</span></label>
                                                             <fieldset
                                                                 class="form-group position-relative has-icon-left input-divider-left">
-                                                                <input type="address" value="{{ $slip->pay_address }}"
+                                                                <input type="address" value=""
                                                                     placeholder="ที่อยู่" class="form-control"
                                                                     name="pay_address">
                                                                 <div class="form-control-position">
@@ -123,7 +137,7 @@
                                                             <fieldset
                                                                 class="form-group position-relative has-icon-left input-divider-left">
                                                                 <input type="text" placeholder="เลขประจำตัวผู้เสียภาษี"
-                                                                    class="form-control" value="{{ $slip->pay_id }}"
+                                                                    class="form-control" value=""
                                                                     name="pay_id"
                                                                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                                                                 <div class="form-control-position">
@@ -145,7 +159,8 @@
                                                         <div class="row">
                                                             <div class="col-lg-12 col-sm-12">
                                                                 <img id="Logo"
-                                                                    src="{{ asset('imguse/' . $slip->pay_imglogo) }}"
+                                                                    {{-- src="{{ asset('imguse/' . $slip->pay_imglogo) }}" --}}
+                                                                    src=""
                                                                     class="img-fluid"
                                                                     style="max-width: 150px;border-radius: 10px;border: 1px solid #d9d9d9;" />
                                                                 <label for="Image" class="form-label"></label>
@@ -164,7 +179,6 @@
                                                 <br>
                                             </div>
                                             <section id="types">
-                                                @include('sweetalert::alert')
                                                 <div class="row" style="top: 0px;margin-top: 30px;">
                                                     <div class="col-12" style="text-align: center;">
                                                         <button type="submit" class="btn btn-outline round mr-1 mb-1"
