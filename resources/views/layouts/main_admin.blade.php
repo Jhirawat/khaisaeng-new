@@ -498,10 +498,10 @@
                             style="font-size: 18px">หน้าหลัก</span></a>
                 </li>
                 <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a
-                        href="{{ route('dashboard.admin') }}"><i class="fa fa-list"
-                            style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
-                            style="font-size: 18px">รายการสั่งซื้อ</span></a>
-                </li>
+                    href="{{ route('order.info') }}"><i class="fa fa-list"
+                        style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
+                        style="font-size: 18px">รายการสั่งซื้อ</span></a>
+            </li>
 
                 <li class="{{ Request::routeIs('list.product', 'add.product') ? 'active' : '' }} nav-item">
                     <a href=""><i class="bi bi-box-seam"style="margin-top: 3px;"></i><span class="menu-title"
@@ -522,12 +522,12 @@
 
 
 
-                <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a {{-- href="{{ route('tracking') }}"><i class="fa fa-truck" --}}
+                <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a href="{{ route('tracking') }}"><i class="fa fa-truck"
                         style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
                             style="font-size: 18px">การจัดส่ง</span></a>
                 </li>
 
-                <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a {{-- href="{{ route('bill') }}"><i class="fa fa-file-text" --}}
+                <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a href="{{ route('bill') }}"><i class="fa fa-file-text"
                         style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
                             style="font-size: 18px">รายการใบเสร็จ</span></a>
                 </li>

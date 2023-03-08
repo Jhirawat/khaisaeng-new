@@ -546,7 +546,7 @@
                     </div>
                     <!-- DataTable ends -->
 
-
+                    bar ends -->
                 </section>
                 <!-- Data list view end -->
 

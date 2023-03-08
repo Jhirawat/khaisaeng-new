@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Auth;
 //     return view('welcome')->name('homee');
 // });
 
-// Auth::routes();
+Auth::routes();
 
 Route::get('/dashboard.admin', [App\Http\Controllers\Dashboard\AdminController::class, 'index'])->name('dashboard.admin');
 
@@ -30,13 +30,7 @@ Route::get('type-product-edit/{id}', [App\Http\Controllers\TypeProductController
 Route::put('type-product-update', [App\Http\Controllers\TypeProductController::class, 'update'])->name('update.type-product');
 Route::get('update-status-type-product', [App\Http\Controllers\TypeProductController::class, 'updatestatus'])->name('updatestatus.type-product');
 
-Route::get('address', [App\Http\Controllers\AddressController::class, 'index'])->name('address');
-Route::get('address-show/{id}', [App\Http\Controllers\AddressController::class, 'show'])->name('show.address');
-Route::post('address-store', [App\Http\Controllers\AddressController::class, 'store'])->name('store.address');
-Route::get('address-edit/{id}', [App\Http\Controllers\AddressController::class, 'edit'])->name('edit.address');
-Route::put('address-update', [App\Http\Controllers\AddressController::class, 'update'])->name('update.address');
-
-
+//orderlist
 
 
 
@@ -48,12 +42,13 @@ Route::get('/admin-show', [App\Http\Controllers\ProductController::class, 'show'
 Route::post('/admin-update', [App\Http\Controllers\ProductController::class, 'update'])->name('admin.update');
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('adminhome');
 
+
+Route::get('order.info', [App\Http\Controllers\OrderInfoController::class, 'index'])->name('order.info');
+
 Route::get('add-product', [App\Http\Controllers\AdminController::class, 'create'])->name('add.product');
 Route::get('list-product', [App\Http\Controllers\ProductController::class, 'index'])->name('list.product');
-Route::post('add-product', [App\Http\Controllers\ProductController::class, 'store'])->name('store.product');
-Route::get('admin-show', [App\Http\Controllers\ProductController::class, 'show'])->name('product.show');
-Route::post('admin-update', [App\Http\Controllers\ProductController::class, 'update'])->name('product.update');
-Route::get('admin', [App\Http\Controllers\AdminController::class, 'index'])->name('adminhome');
+
+
 //Admin monthly,yearly
 Route::get('/monthly', [App\Http\Controllers\MonthlyController::class, 'index'])->name('monthly.admin');
 Route::get('/yearly', [App\Http\Controllers\YearlyController::class, 'index'])->name('yearly.admin');
