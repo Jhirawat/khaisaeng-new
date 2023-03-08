@@ -46,7 +46,7 @@
                                 <h1 class="m-0" style="color:#555555;font-family: 'Kanit', sans-serif; font-weight:600;">
                                     <img src="{{ asset('images/tax2.png') }}" class="mr-2"
                                         style="height: 54px;
-                                        width: 52px;">ที่ตั้งวิสาหกิจ
+                                        width: 52px;">ที่ตั้งวิสาหกิจ0
                                 </h1>
                             </div>
                         </div><!-- /.col -->
