@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Auth;
 //     return view('welcome')->name('homee');
 // });
 
-Auth::routes();
+// Auth::routes();
 
 Route::get('/dashboard.admin', [App\Http\Controllers\Dashboard\AdminController::class, 'index'])->name('dashboard.admin');
 
