@@ -22,6 +22,7 @@
         font-family: 'Kanit', sans-serif;
         font-weight: 600 !important;
     }
+<<<<<<< HEAD
 
 
     .navbar-floating .header-navbar-shadow {

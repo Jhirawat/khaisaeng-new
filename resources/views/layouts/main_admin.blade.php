@@ -330,10 +330,10 @@
                                 class="dropdown-toggle nav-link dropdown-user-link" href="#"
                                 data-toggle="dropdown">
                                 <div class="user-nav d-sm-flex d-none"><span
-                                        class="user-name text-bold-600">{{ Auth::user() }} </span><span
-                                        class="user-status"><i
-                                            class="fa fa-circle font-small-3 text-success mr-50"></i> ใช้งานอยู่</span>
+                                        class="user-name text-bold-600">{{ Auth::user() }} </span>
                                 </div><span>
+                                    <img class="round"src="https://i.pinimg.com/564x/a5/e8/1f/a5e81f19cf2c587876fd1bb08ae0249f.jpg"
+                                    alt="avatar"height="40" width="40">
                                     {{-- @if (Auth::user()->emimg != null)
                                         <img class="round"src="{{ asset('imguse/' . Auth::user()) }}"
                                             alt="avatar"height="40" width="40">
@@ -553,31 +553,32 @@
                         </li> --}}
                     </ul>
                 </li>
-                <li class="{{ Request::routeIs('departsetting') ? 'active' : '' }} nav-item"><a href=""><i
+                <li class="{{ Request::routeIs('type.product','address') ? 'active' : '' }} nav-item"><a href=""><i
                             class="fa fa-gear"style="margin-top: 3px;"></i><span class="menu-title"
                             data-i18n="Todo"style="font-size: 18px; ">ตั้งค่า</span></a>
                     <ul class="menu-content">
                         <li class="{{ Request::routeIs('departsetting') ? 'active' : '' }} nav-item"><a
+<<<<<<< HEAD
                             href="{{ route('type.product') }}"><i class="feather icon-circle" style="font-size: 1.2rem;"></i><span
                                     class="menu-item" data-i18n="Details">ประเภทสินค้า</span></a>
                         </li>
 
-                        <li class="{{ Request::routeIs('tax') ? 'active' : '' }} nav-item"><a href=""><i
+                        <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a href=""><i
                                     class="feather icon-circle" style="font-size: 1.2rem;"></i><span
                                     class="menu-item" data-i18n="Checkout">หน่วยสินค้า
                                 </span></a>
                         </li>
-                        <li class="{{ Request::routeIs('tax') ? 'active' : '' }} nav-item"><a href=""><i
+                        <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a href=""><i
                             class="feather icon-circle" style="font-size: 1.2rem;"></i><span
                             class="menu-item" data-i18n="Checkout">การจัดส่งภายในจังหวัด
                         </span></a>
-                        <li class="{{ Request::routeIs('tax') ? 'active' : '' }} nav-item"><a href=""><i
+                        <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a href=""><i
                             class="feather icon-circle" style="font-size: 1.2rem;"></i><span
                             class="menu-item" data-i18n="Checkout">การจัดส่งต่างจังหวัดจังหวัด
                         </span></a>
-                        <li class="{{ Request::routeIs('tax') ? 'active' : '' }} nav-item"><a href=""><i
+                        <li class="{{ Request::routeIs('address') ? 'active' : '' }} nav-item"><a href="{{ route('address') }}"><i
                             class="feather icon-circle" style="font-size: 1.2rem;"></i><span
-                            class="menu-item" data-i18n="Checkout">ที่ตั้งวิศหกิจ
+                            class="menu-item" data-i18n="Checkout">ที่ตั้งวิสาหกิจ
                         </span></a>
                 </li>
                     </ul>

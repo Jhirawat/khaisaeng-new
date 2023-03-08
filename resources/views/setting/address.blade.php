@@ -14,8 +14,22 @@
             font-style: italic;
             border-color: red !important;
         }
+<<<<<<< HEAD
 
-        
+        .navbar-floating .header-navbar-shadow {
+            display: block;
+            background: linear-gradient(180deg, #524f4f00 44%, rgb(248 248 248 / 0%) 73%, rgba(255, 255, 255, 0))!important;
+            padding-top: 2.2rem;
+            background-repeat: repeat;
+            width: 100%;
+            height: 102px;
+            position: fixed;
+            top: 0;
+            z-index: 11;
+        }
+
+=======
+>>>>>>> 9f3d3329d9e0de051e99732be4ccc727d6a93468
     </style>
 @endsection
 @section('content')

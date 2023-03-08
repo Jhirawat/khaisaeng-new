@@ -29,9 +29,11 @@ Route::post('type-product-store', [App\Http\Controllers\TypeProductController::c
 Route::get('type-product-edit/{id}', [App\Http\Controllers\TypeProductController::class, 'edit'])->name('edit.type-product');
 Route::put('type-product-update', [App\Http\Controllers\TypeProductController::class, 'update'])->name('update.type-product');
 Route::get('update-status-type-product', [App\Http\Controllers\TypeProductController::class, 'updatestatus'])->name('updatestatus.type-product');
-//Admin
-Route::get('/tracking', [App\Http\Controllers\TrackingController::class, 'index'])->name('tracking');
-Route::get('/bill', [App\Http\Controllers\BillController::class, 'index'])->name('bill');
+
+
+
+
+
 Route::get('/home', [App\Http\Controllers\ProductController::class, 'productList'])->name('products.list');
 //Admin
 Route::get('/create', [App\Http\Controllers\HomeController::class, 'create'])->name('create');
