@@ -42,11 +42,11 @@ Route::put('address-update', [App\Http\Controllers\AddressController::class, 'up
 
 Route::get('/home', [App\Http\Controllers\ProductController::class, 'productList'])->name('products.list');
 //Admin
-// Route::get('/create', [App\Http\Controllers\HomeController::class, 'create'])->name('create');
-// Route::post('/store', [App\Http\Controllers\ProductController::class, 'store'])->name('store');
-// Route::get('/admin-show', [App\Http\Controllers\ProductController::class, 'show'])->name('admin.show');
-// Route::post('/admin-update', [App\Http\Controllers\ProductController::class, 'update'])->name('admin.update');
-// Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('adminhome');
+Route::get('/create', [App\Http\Controllers\HomeController::class, 'create'])->name('create');
+Route::post('/store', [App\Http\Controllers\ProductController::class, 'store'])->name('store');
+Route::get('/admin-show', [App\Http\Controllers\ProductController::class, 'show'])->name('admin.show');
+Route::post('/admin-update', [App\Http\Controllers\ProductController::class, 'update'])->name('admin.update');
+Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('adminhome');
 
 Route::get('add-product', [App\Http\Controllers\AdminController::class, 'create'])->name('add.product');
 Route::get('list-product', [App\Http\Controllers\ProductController::class, 'index'])->name('list.product');

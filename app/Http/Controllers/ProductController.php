@@ -22,7 +22,7 @@ class ProductController extends Controller
         //
         // $product = Product::all();
         // return view('home', compact('product'));
-        return view('product');
+        return view('listorder');
     }
 
     /**
