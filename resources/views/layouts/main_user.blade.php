@@ -472,7 +472,7 @@
     <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
         <div class="navbar-header" style="display: flex; margin-top: 10px; margin-bottom: 5px;">
             <div style="width: 25%"></div>
-            <a href="{{ url('/') }}">
+            <a href="{{ url('/home') }}">
                 <img
                     src="https://cdn.discordapp.com/attachments/799538881258979358/1055414370076729384/Red_Retro_Doodle_Strawberry_Original_Fruit_Logo_1_2.png"style="max-width: 100px;">
             </a>
@@ -491,81 +491,54 @@
                 style="margin-top: 18px; font-family: 'Kanit', sans-serif; font-weight:800;">
                 {{-- <li class=" navigation-header"><span>Dashboard</span>
                 </li> --}}
-                <li class="{{ Request::routeIs('dashboard.admin') ? 'active' : '' }} nav-item"><a
-                        href="{{ route('dashboard.admin') }}"><i class="bi bi-house-door-fill"
+                <li class="{{ Request::routeIs('products.list') ? 'active' : '' }} nav-item"><a
+                        href="{{ route('products.list') }}"><i class="bi bi-house-door-fill"
                             style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
-                            style="font-size: 18px">หน้าหลักลูดค้า</span></a>
+                            style="font-size: 18px">หน้าหลัก</span></a>
                 </li>
                 <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a
-                    href="{{ route('dashboard.admin') }}"><i class="fa fa-list"
+                    href="{{ route('products.list') }}"><i class="fa fa-shopping-basket"
                         style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
-                        style="font-size: 18px">รายการสั่งซื้อ</span></a>
-            </li>
+                        style="font-size: 18px">ตะกร้าสินค้า</span></a>
+                 </li>
+
+                <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a
+                        href="{{ route('products.list') }}"><i class="fa fa-map-marker"
+                            style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
+                            style="font-size: 18px">ที่อยู่</span></a>
+                </li>
 
                 <li class="{{ Request::routeIs('stock') ? 'active' : '' }} nav-item">
                     <a href=""><i class="bi bi-box-seam"style="margin-top: 3px;"></i><span class="menu-title"
-                            data-i18n="Todo"style="font-size: 18px; ">ประเภทสินค้า</span></a>
+                            data-i18n="Todo"style="font-size: 18px; ">สถานะการสั่งซื้อ</span></a>
                     <ul class="menu-content">
                         <li class="{{ Request::routeIs('stock') ? 'active' : '' }} nav-item"><a href=""><i
                                     class="feather icon-circle" style="font-size: 1.2rem;"></i><span
-                                    class="menu-item" data-i18n="Shop"></span></a>
+                                    class="menu-item" data-i18n="Shop">ภายในจังหวัด</span></a>
                         </li>
                         <li class="{{ Request::routeIs('addInventory') ? 'active' : '' }} nav-item"><a
                                 href=""><i class="feather icon-circle" style="font-size: 1.2rem;"></i><span
-                                    class="menu-item" data-i18n="Shop">เพิ่มสินค้า</span></a>
+                                    class="menu-item" data-i18n="Shop">ต่างจังหวัด</span></a>
                         </li>
-                        {{-- <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a
-                                href="{{ url('/stocksetting') }}"><i class="bi bi-gear-fill"
-                                    style="font-size: 1.2rem;"></i><span class="menu-item"
-                                    data-i18n="Checkout">ตั้งค่า</span></a>
-                        </li> --}}
+                        
                     </ul>
                 </li>
                 <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item">
-                    <a href=""><i class="fa fa-line-chart"style="margin-top: 3px;"></i><span
+                    <a href=""><i class="fa fa-check-square-o"style="margin-top: 3px;"></i><span
                             class="menu-title" data-i18n="Calender"style="font-size: 18px; ">ประวัตืการสั้งซื้อ
                         </span></a>
                     <ul class="menu-content">
                         <li class="{{ Request::routeIs('employee') ? 'active' : '' }} nav-item"><a href=""><i
                                     class="feather icon-circle" style="font-size: 1.2rem;"></i><span
-                                    class="menu-item">รายการล่าสุด</span></a>
+                                    class="menu-item">ประวัตืการสั้งซื้อ</span></a>
                         </li>
                         <li class="{{ Request::routeIs('addEmployee1') ? 'active' : '' }} nav-item"><a
                                 href=""><i class="feather icon-circle" style="font-size: 1.2rem;"></i><span
-                                    class="menu-item">ฟฟฟฟฟฟฟฟฟ</span></a>
+                                    class="menu-item">ใบเสร็จ</span></a>
                         </li>
-                        {{-- <li class="{{ Request::routeIs('employeesetting') ? 'active' : '' }} nav-item"><a
-                                href="{{ route('employeesetting') }}"><i class="feather icon-circle"
-                                    style="font-size: 1.2rem;"></i><span class="menu-item"
-                                    data-i18n="Shop">รายชื่อพนักงานลาออก</span></a>
-                        </li> --}}
                     </ul>
                 </li>
-                <li class="{{ Request::routeIs('departsetting') ? 'active' : '' }} nav-item"><a href=""><i
-                            class="fa fa-gear"style="margin-top: 3px;"></i><span class="menu-title"
-                            data-i18n="Todo"style="font-size: 18px; ">ตั้งค่า</span></a>
-                    <ul class="menu-content">
-                        <li class="{{ Request::routeIs('departsetting') ? 'active' : '' }} nav-item"><a
-                                href=""><i class="feather icon-circle" style="font-size: 1.2rem;"></i><span
-                                    class="menu-item" data-i18n="Details">ประเภทสินค้า</span></a>
-                        </li>
-
-                        <li class="{{ Request::routeIs('tax') ? 'active' : '' }} nav-item"><a href=""><i
-                                    class="feather icon-circle" style="font-size: 1.2rem;"></i><span
-                                    class="menu-item" data-i18n="Checkout">หน่วยนับสินค้า
-                                </span></a>
-                        </li>
-                        <li class="{{ Request::routeIs('tax') ? 'active' : '' }} nav-item"><a href=""><i
-                            class="feather icon-circle" style="font-size: 1.2rem;"></i><span
-                            class="menu-item" data-i18n="Checkout">ที่ตั้งวิศหกิจ
-                        </span></a>
-                        <li class="{{ Request::routeIs('tax') ? 'active' : '' }} nav-item"><a href=""><i
-                            class="feather icon-circle" style="font-size: 1.2rem;"></i><span
-                            class="menu-item" data-i18n="Checkout">ใบเสร็จ
-                        </span></a>
-                </li>
-                    </ul>
-                </li>
+               
                 <li class="{{ Request::routeIs('logout') ? 'active' : '' }} nav-item"><a href=""
                         onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();"><i

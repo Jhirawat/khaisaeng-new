@@ -10,7 +10,7 @@
     </style>
 @endsection
 @section('head')
-    <title>ตั้งค่าประเภทแผนก</title>
+    <title>เพิ่มประเภทสินค้า</title>
 @endsection
 <style>
     table.dataTable thead th,
