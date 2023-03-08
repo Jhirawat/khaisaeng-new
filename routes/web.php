@@ -59,3 +59,24 @@ Route::get('/monthly', [App\Http\Controllers\MonthlyController::class, 'index'])
 Route::get('/yearly', [App\Http\Controllers\YearlyController::class, 'index'])->name('yearly.admin');
 
 
+
+//tracking
+Route::get('/tracking', [App\Http\Controllers\TrackingController::class, 'index'])->name('tracking');
+
+
+//bill
+Route::get('/bill', [App\Http\Controllers\BillController::class, 'index'])->name('bill');
+
+
+
+//address
+Route::get('address', [App\Http\Controllers\AddressController::class, 'index'])->name('address');
+Route::get('address-show/{id}', [App\Http\Controllers\AddressController::class, 'show'])->name('show.address');
+Route::post('address-store', [App\Http\Controllers\AddressController::class, 'store'])->name('store.address');
+Route::get('address-edit/{id}', [App\Http\Controllers\AddressController::class, 'edit'])->name('edit.address');
+Route::put('address-update', [App\Http\Controllers\AddressController::class, 'update'])->name('update.address');
+
+
+
+
+
