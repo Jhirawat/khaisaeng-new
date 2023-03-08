@@ -503,16 +503,16 @@
                         style="font-size: 18px">รายการสั่งซื้อ</span></a>
             </li>
 
-                <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item">
+                <li class="{{ Request::routeIs('list.product','add.product') ? 'active' : '' }} nav-item">
                     <a href=""><i class="bi bi-box-seam"style="margin-top: 3px;"></i><span class="menu-title"
                             data-i18n="Todo"style="font-size: 18px; ">สินค้า</span></a>
                     <ul class="menu-content">
-                        <li class="{{ Request::routeIs('store') ? 'active' : '' }} nav-item"><a href="{{ route('store') }}"><i
+                        <li class="{{ Request::routeIs('list.product') ? 'active' : '' }} nav-item"><a href="{{ route('list.product') }}"><i
                             class="feather icon-circle" style="font-size: 1.2rem;"></i><span
                                     class="menu-item" data-i18n="Shop">รายการสินค้า</span></a>
                         </li>
-                        <li class="{{ Request::routeIs('create') ? 'active' : '' }} nav-item"><a
-                                href="{{ route('create') }}"><i class="feather icon-circle" style="font-size: 1.2rem;"></i><span
+                        <li class="{{ Request::routeIs('add.product') ? 'active' : '' }} nav-item"><a
+                                href="{{ route('add.product') }}"><i class="feather icon-circle" style="font-size: 1.2rem;"></i><span
                                     class="menu-item" data-i18n="Shop">เพิ่มสินค้า</span></a>
                         </li>
                     </ul>
@@ -521,13 +521,13 @@
 
 
                 <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a
-                    href="{{ route('tracking') }}"><i class="fa fa-truck"
+                    {{-- href="{{ route('tracking') }}"><i class="fa fa-truck" --}}
                         style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
                         style="font-size: 18px">การจัดส่ง</span></a>
             </li>
 
             <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a
-                href="{{ route('bill') }}"><i class="fa fa-file-text"
+                {{-- href="{{ route('bill') }}"><i class="fa fa-file-text" --}}
                     style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
                     style="font-size: 18px">รายการใบเสร็จ</span></a>
         </li>

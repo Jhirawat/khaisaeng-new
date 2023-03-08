@@ -19,14 +19,9 @@ class AdminController extends Controller
         return view('admin', compact('product'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('create');
     }
 
     /**
@@ -48,7 +43,6 @@ class AdminController extends Controller
      */
     public function show($id)
     {
-       
     }
 
     /**
