@@ -581,7 +581,7 @@
                         </span></a>
                         <li class="{{ Request::routeIs('address') ? 'active' : '' }} nav-item"><a href="{{ route('address') }}"><i
                             class="feather icon-circle" style="font-size: 1.2rem;"></i><span
-                            class="menu-item" data-i18n="Checkout">ที่ตั้งวิศหกิจ
+                            class="menu-item" data-i18n="Checkout">ที่ตั้งวิสาหกิจ
                         </span></a>
                 </li>
                     </ul>
