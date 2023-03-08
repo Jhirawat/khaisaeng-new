@@ -333,7 +333,7 @@
                                         class="user-name text-bold-600">{{ Auth::user() }} </span>
                                 </div><span>
                                     <img class="round"src="https://i.pinimg.com/564x/a5/e8/1f/a5e81f19cf2c587876fd1bb08ae0249f.jpg"
-                                    alt="avatar"height="40" width="40">
+                                        alt="avatar"height="40" width="40">
                                     {{-- @if (Auth::user()->emimg != null)
                                         <img class="round"src="{{ asset('imguse/' . Auth::user()) }}"
                                             alt="avatar"height="40" width="40">
@@ -498,39 +498,39 @@
                             style="font-size: 18px">หน้าหลัก</span></a>
                 </li>
                 <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a
-                    href="{{ route('order.info') }}"><i class="fa fa-list"
-                        style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
-                        style="font-size: 18px">รายการสั่งซื้อ</span></a>
-            </li>
+                        href="{{ route('dashboard.admin') }}"><i class="fa fa-list"
+                            style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
+                            style="font-size: 18px">รายการสั่งซื้อ</span></a>
+                </li>
 
-                <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item">
+                <li class="{{ Request::routeIs('list.product', 'add.product') ? 'active' : '' }} nav-item">
                     <a href=""><i class="bi bi-box-seam"style="margin-top: 3px;"></i><span class="menu-title"
                             data-i18n="Todo"style="font-size: 18px; ">สินค้า</span></a>
                     <ul class="menu-content">
-                        <li class="{{ Request::routeIs('store') ? 'active' : '' }} nav-item"><a href="{{ route('store') }}"><i
-                            class="feather icon-circle" style="font-size: 1.2rem;"></i><span
-                                    class="menu-item" data-i18n="Shop">รายการสินค้า</span></a>
+                        <li class="{{ Request::routeIs('list.product') ? 'active' : '' }} nav-item"><a
+                                href="{{ route('list.product') }}"><i class="feather icon-circle"
+                                    style="font-size: 1.2rem;"></i><span class="menu-item"
+                                    data-i18n="Shop">รายการสินค้า</span></a>
                         </li>
-                        <li class="{{ Request::routeIs('create') ? 'active' : '' }} nav-item"><a
-                                href="{{ route('create') }}"><i class="feather icon-circle" style="font-size: 1.2rem;"></i><span
-                                    class="menu-item" data-i18n="Shop">เพิ่มสินค้า</span></a>
+                        <li class="{{ Request::routeIs('add.product') ? 'active' : '' }} nav-item"><a
+                                href="{{ route('add.product') }}"><i class="feather icon-circle"
+                                    style="font-size: 1.2rem;"></i><span class="menu-item"
+                                    data-i18n="Shop">เพิ่มสินค้า</span></a>
                         </li>
                     </ul>
                 </li>
 
 
 
-                <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a
-                    href="{{ route('tracking') }}"><i class="fa fa-truck"
+                <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a {{-- href="{{ route('tracking') }}"><i class="fa fa-truck" --}}
                         style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
-                        style="font-size: 18px">การจัดส่ง</span></a>
-            </li>
+                            style="font-size: 18px">การจัดส่ง</span></a>
+                </li>
 
-            <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a
-                href="{{ route('bill') }}"><i class="fa fa-file-text"
-                    style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
-                    style="font-size: 18px">รายการใบเสร็จ</span></a>
-        </li>
+                <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a {{-- href="{{ route('bill') }}"><i class="fa fa-file-text" --}}
+                        style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
+                            style="font-size: 18px">รายการใบเสร็จ</span></a>
+                </li>
 
 
                 <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item">
@@ -538,13 +538,13 @@
                             class="menu-title" data-i18n="Calender"style="font-size: 18px; ">ยอดขาย
                         </span></a>
                     <ul class="menu-content">
-                        <li class="{{ Request::routeIs('monthly.admin') ? 'active' : '' }} nav-item"><a href="{{ route('monthly.admin') }}"><i
-                                    class="feather icon-circle" style="font-size: 1.2rem;"></i><span
-                                    class="menu-item">รายเดือน</span></a>
+                        <li class="{{ Request::routeIs('monthly.admin') ? 'active' : '' }} nav-item"><a
+                                href="{{ route('monthly.admin') }}"><i class="feather icon-circle"
+                                    style="font-size: 1.2rem;"></i><span class="menu-item">รายเดือน</span></a>
                         </li>
                         <li class="{{ Request::routeIs('yearly.admin') ? 'active' : '' }} nav-item"><a
-                                href="{{ route('yearly.admin') }}"><i class="feather icon-circle" style="font-size: 1.2rem;"></i><span
-                                    class="menu-item">รายปี</span></a>
+                                href="{{ route('yearly.admin') }}"><i class="feather icon-circle"
+                                    style="font-size: 1.2rem;"></i><span class="menu-item">รายปี</span></a>
                         </li>
                         {{-- <li class="{{ Request::routeIs('employeesetting') ? 'active' : '' }} nav-item"><a
                                 href="{{ route('employeesetting') }}"><i class="feather icon-circle"
@@ -553,14 +553,14 @@
                         </li> --}}
                     </ul>
                 </li>
-                <li class="{{ Request::routeIs('type.product','address') ? 'active' : '' }} nav-item"><a href=""><i
-                            class="fa fa-gear"style="margin-top: 3px;"></i><span class="menu-title"
+                <li class="{{ Request::routeIs('type.product', 'address') ? 'active' : '' }} nav-item"><a
+                        href=""><i class="fa fa-gear"style="margin-top: 3px;"></i><span class="menu-title"
                             data-i18n="Todo"style="font-size: 18px; ">ตั้งค่า</span></a>
                     <ul class="menu-content">
-                        <li class="{{ Request::routeIs('departsetting') ? 'active' : '' }} nav-item"><a
-<<<<<<< HEAD
-                            href="{{ route('type.product') }}"><i class="feather icon-circle" style="font-size: 1.2rem;"></i><span
-                                    class="menu-item" data-i18n="Details">ประเภทสินค้า</span></a>
+                        <li class="{{ Request::routeIs('departsetting') ? 'active' : '' }} nav-item"><a <<<<<<< HEAD
+                                href="{{ route('type.product') }}"><i class="feather icon-circle"
+                                    style="font-size: 1.2rem;"></i><span class="menu-item"
+                                    data-i18n="Details">ประเภทสินค้า</span></a>
                         </li>
 
                         <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a href=""><i
@@ -569,18 +569,19 @@
                                 </span></a>
                         </li>
                         <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a href=""><i
-                            class="feather icon-circle" style="font-size: 1.2rem;"></i><span
-                            class="menu-item" data-i18n="Checkout">การจัดส่งภายในจังหวัด
-                        </span></a>
+                                    class="feather icon-circle" style="font-size: 1.2rem;"></i><span
+                                    class="menu-item" data-i18n="Checkout">การจัดส่งภายในจังหวัด
+                                </span></a>
                         <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a href=""><i
-                            class="feather icon-circle" style="font-size: 1.2rem;"></i><span
-                            class="menu-item" data-i18n="Checkout">การจัดส่งต่างจังหวัดจังหวัด
-                        </span></a>
-                        <li class="{{ Request::routeIs('address') ? 'active' : '' }} nav-item"><a href="{{ route('address') }}"><i
-                            class="feather icon-circle" style="font-size: 1.2rem;"></i><span
-                            class="menu-item" data-i18n="Checkout">ที่ตั้งวิสาหกิจ
-                        </span></a>
-                </li>
+                                    class="feather icon-circle" style="font-size: 1.2rem;"></i><span
+                                    class="menu-item" data-i18n="Checkout">การจัดส่งต่างจังหวัดจังหวัด
+                                </span></a>
+                        <li class="{{ Request::routeIs('address') ? 'active' : '' }} nav-item"><a
+                                href="{{ route('address') }}"><i class="feather icon-circle"
+                                    style="font-size: 1.2rem;"></i><span class="menu-item"
+                                    data-i18n="Checkout">ที่ตั้งวิสาหกิจ
+                                </span></a>
+                        </li>
                     </ul>
                 </li>
                 <li class="{{ Request::routeIs('logout') ? 'active' : '' }} nav-item"><a href=""
@@ -646,7 +647,6 @@
     <script src="{{ asset('app-assets/vendors/js/extensions/sweetalert2.all.min.js') }}"></script>
     <script src="{{ asset('app-assets/vendors/js/extensions/polyfill.min.js') }}"></script>
 
-
     <script src="{{ asset('app-assets/vendors/js/tables/datatable/pdfmake.min.js') }}"></script>
     <script src="{{ asset('app-assets/vendors/js/tables/datatable/vfs_fonts.js') }}"></script>
     <script src="{{ asset('app-assets/vendors/js/tables/datatable/datatables.min.js') }}"></script>
@@ -686,6 +686,14 @@
     <script src="{{ asset('app-assets/vendors/js/charts/chart.min.js') }}"></script>
     <script src="{{ asset('app-assets/vendors/js/charts/apexcharts.min.js') }}"></script>
     <script src="{{ asset('app-assets/js/scripts/charts/chart-chartjs.js') }}"></script>
+
+    <script src="{{ asset('app-assets/vendors/js/extensions/dropzone.min.js') }}"></script>
+    <script src="{{ asset('app-assets/vendors/js/tables/datatable/datatables.min.js') }}"></script>
+    <script src="{{ asset('app-assets/vendors/js/tables/datatable/datatables.buttons.min.js') }}"></script>
+    <script src="{{ asset('app-assets/vendors/js/tables/datatable/datatables.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('app-assets/vendors/js/tables/datatable/buttons.bootstrap.min.js') }}"></script>
+    <script src="{{ asset('app-assets/vendors/js/tables/datatable/dataTables.select.min.js') }}"></script>
+    <script src="{{ asset('app-assets/vendors/js/tables/datatable/datatables.checkboxes.min.js') }}"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script type="text/javascript" src="{{ asset('bootstrap-datepicker-thai/js/bootstrap-datepicker.js') }}"></script>
