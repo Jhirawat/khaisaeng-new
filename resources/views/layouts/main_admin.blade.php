@@ -115,12 +115,12 @@
         }
 
         .nav.nav-tabs .nav-item .nav-link.active {
-            color: #164176;
+            color: #ea5455;
         }
 
         .nav.nav-tabs .nav-item .nav-link.active:after {
-            background: linear-gradient(30deg, #164176, rgb(110, 121, 224)) !important;
-            box-shadow: 0 0 8px 0 rgb(67, 84, 240) !important;
+            background: linear-gradient(30deg, #d08cd4, rgb(231, 145, 234)) !important;
+            box-shadow: 0 0 8px 0 rgb(243, 147, 174) !important;
         }
 
         .table td {
@@ -135,7 +135,7 @@
         table.dataTable tfoot td {
             font-size: 1.0rem;
             border: 0;
-            color: #164176;
+            color: #ea5455;
         }
 
         .swal2-title {
@@ -157,7 +157,7 @@
             border: 0;
             border-radius: 0.25em;
             background: initial;
-            background-color: #164176 !important;
+            background-color: #e19be9 !important;
             color: #fff;
             font-size: 1.0625em;
         }
@@ -185,7 +185,7 @@
             margin: -76px 0 0 -76px;
             border: 16px solid #f3f3f3;
             border-radius: 50%;
-            border-top: 16px solid #3498db;
+            border-top: 16px solid #e97bad;
             -webkit-animation: spin 2s linear infinite;
             animation: spin 2s linear infinite;
         }
@@ -473,7 +473,7 @@
     <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
         <div class="navbar-header" style="display: flex; margin-top: 10px; margin-bottom: 5px;">
             <div style="width: 25%"></div>
-            <a href="{{ url('/') }}">
+            <a href="{{ url('dashboard.admin') }}">
                 <img
                     src="https://cdn.discordapp.com/attachments/799538881258979358/1055414370076729384/Red_Retro_Doodle_Strawberry_Original_Fruit_Logo_1_2.png"style="max-width: 100px;">
             </a>
@@ -494,21 +494,21 @@
                 </li> --}}
                 <li class="{{ Request::routeIs('dashboard.admin') ? 'active' : '' }} nav-item"><a
                         href="{{ route('dashboard.admin') }}"><i class="bi bi-house-door-fill"
-                            style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
+                            style="margin-top: 3px ;"></i><span class="menu-title" data-i18n="Email"
                             style="font-size: 18px">หน้าหลัก</span></a>
                 </li>
-                <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a
+                <li class="{{ Request::routeIs('order.info') ? 'active' : '' }} nav-item"><a
                     href="{{ route('order.info') }}"><i class="fa fa-list"
                         style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
                         style="font-size: 18px">รายการสั่งซื้อ</span></a>
             </li>
 
-                <li class="{{ Request::routeIs('list.product', 'add.product') ? 'active' : '' }} nav-item">
+                <li class="{{ Request::routeIs('products.list', 'add.product') ? 'active' : '' }} nav-item">
                     <a href=""><i class="bi bi-box-seam"style="margin-top: 3px;"></i><span class="menu-title"
                             data-i18n="Todo"style="font-size: 18px; ">สินค้า</span></a>
                     <ul class="menu-content">
-                        <li class="{{ Request::routeIs('list.product') ? 'active' : '' }} nav-item"><a
-                                href="{{ route('list.product') }}"><i class="feather icon-circle"
+                        <li class="{{ Request::routeIs('products.list') ? 'active' : '' }} nav-item"><a
+                                href="{{ route('products.list') }}"><i class="feather icon-circle"
                                     style="font-size: 1.2rem;"></i><span class="menu-item"
                                     data-i18n="Shop">รายการสินค้า</span></a>
                         </li>
@@ -522,18 +522,18 @@
 
 
 
-                <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a href="{{ route('tracking') }}"><i class="fa fa-truck"
+                <li class="{{ Request::routeIs('tracking') ? 'active' : '' }} nav-item"><a href="{{ route('tracking') }}"><i class="fa fa-truck"
                         style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
                             style="font-size: 18px">การจัดส่ง</span></a>
                 </li>
 
-                <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a href="{{ route('bill') }}"><i class="fa fa-file-text"
+                <li class="{{ Request::routeIs('bill') ? 'active' : '' }} nav-item"><a href="{{ route('bill') }}"><i class="fa fa-file-text"
                         style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
                             style="font-size: 18px">รายการใบเสร็จ</span></a>
                 </li>
 
 
-                <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item">
+                <li class="{{ Request::routeIs('monthly.admin','yearly.admin') ? 'active' : '' }} nav-item">
                     <a href=""><i class="fa fa-line-chart"style="margin-top: 3px;"></i><span
                             class="menu-title" data-i18n="Calender"style="font-size: 18px; ">ยอดขาย
                         </span></a>
@@ -694,6 +694,9 @@
     <script src="{{ asset('app-assets/vendors/js/tables/datatable/buttons.bootstrap.min.js') }}"></script>
     <script src="{{ asset('app-assets/vendors/js/tables/datatable/dataTables.select.min.js') }}"></script>
     <script src="{{ asset('app-assets/vendors/js/tables/datatable/datatables.checkboxes.min.js') }}"></script>
+    <script src="{{ asset('app-assets/js/scripts/pages/invoice.js')}}"></script>
+    <script src="{{ asset('app-assets/js/scripts/forms/wizard-steps.js')}}"></script>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script type="text/javascript" src="{{ asset('bootstrap-datepicker-thai/js/bootstrap-datepicker.js') }}"></script>

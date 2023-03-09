@@ -8,6 +8,6 @@ class MonthlyController extends Controller
 {
     public function index()
     {
-        return view('Sales.monthly');
+        return view('admin.sales.monthly');
     }
 }

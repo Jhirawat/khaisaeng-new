@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Auth;
 Auth::routes();
 
 Route::get('/dashboard.admin', [App\Http\Controllers\Dashboard\AdminController::class, 'index'])->name('dashboard.admin');
+Route::get('/dashboard.user', [App\Http\Controllers\Dashboard\UserController::class, 'index'])->name('dashboard.user');
 
 
 Route::get('type-product', [App\Http\Controllers\TypeProductController::class, 'index'])->name('type.product');
@@ -32,21 +33,20 @@ Route::get('update-status-type-product', [App\Http\Controllers\TypeProductContro
 
 //orderlist
 
+Route::get('/product-list', [App\Http\Controllers\Dashboard\AdminController::class, 'productList'])->name('products.list');
 
-
-Route::get('/home', [App\Http\Controllers\ProductController::class, 'productList'])->name('products.list');
 //Admin
 Route::get('/create', [App\Http\Controllers\HomeController::class, 'create'])->name('create');
 Route::post('/store', [App\Http\Controllers\ProductController::class, 'store'])->name('store');
 Route::get('/admin-show', [App\Http\Controllers\ProductController::class, 'show'])->name('admin.show');
 Route::post('/admin-update', [App\Http\Controllers\ProductController::class, 'update'])->name('admin.update');
-Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('adminhome');
 
 
-Route::get('order.info', [App\Http\Controllers\OrderInfoController::class, 'index'])->name('order.info');
+Route::get('/order', [App\Http\Controllers\OrderController::class, 'index'])->name('ordero');
+Route::get('/order.info', [App\Http\Controllers\OrderInfoController::class, 'index'])->name('order.info');
 
-Route::get('add-product', [App\Http\Controllers\AdminController::class, 'create'])->name('add.product');
-Route::get('list-product', [App\Http\Controllers\ProductController::class, 'index'])->name('list.product');
+Route::get('/add-product', [App\Http\Controllers\AdminController::class, 'create'])->name('add.product');
+// Route::get('/list-product', [App\Http\Controllers\ProductController::class, 'index'])->name('list.product');
 
 
 //Admin monthly,yearly

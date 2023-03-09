@@ -1,4 +1,4 @@
-@extends('layouts.main_user')
+@extends('layouts.main_admin')
 
 @section('head')
 @endsection
@@ -98,7 +98,7 @@
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="home">หน้าหลัก</a>
                                     </li>
-                                    
+
                                     <li class="breadcrumb-item active">ร้านค้า
                                     </li>
                                 </ol>

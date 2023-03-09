@@ -172,12 +172,6 @@ class ProductController extends Controller
 
         return $products;
     }
-    public function productList()
-    { {
-            $productss = Product::all();
 
-            return view('product', compact('productss'));
-        }
-    }
 }
 

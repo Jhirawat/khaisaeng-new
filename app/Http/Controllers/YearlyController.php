@@ -8,6 +8,6 @@ class YearlyController extends Controller
 {
     public function index()
     {
-        return view('Sales.yearly');
+        return view('admin.sales.yearly');
     }
 }

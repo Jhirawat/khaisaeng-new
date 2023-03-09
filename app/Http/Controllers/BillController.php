@@ -8,6 +8,6 @@ class BillController extends Controller
 {
     public function index()
     {
-        return view('bill');
+        return view('admin.bill');
     }
 }
