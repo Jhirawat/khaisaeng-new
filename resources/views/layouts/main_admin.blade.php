@@ -262,7 +262,7 @@
         }
 
         .main-menu.menu-light .navigation>li.active>a {
-            background: linear-gradient(118deg, #ea5455, #ea545552);
+            background: linear-gradient(118deg, #ea5455, #ea545552)!important;
             box-shadow: 0 0 10px 1px rgb(148 148 148 / 70%);
             color: #fff;
             font-weight: 400;
