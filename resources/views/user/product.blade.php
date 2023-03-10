@@ -186,18 +186,13 @@
                         <div class="row">
                         @foreach ($products as $item)
                         <div class="col" style="margin-top: 25px;" >
-                        <div class="card ecommerce-card" style="width: 18rem">
+                        <div class="card ecommerce-card" style="width: 24rem">
                             <div class="card-content">
                             <div class="card-body">
-                            <img src="{{ asset('images/' . $item->image) }}" class="card-img-top" width="18" height="200" />
+                            <img src="{{ asset('images/' . $item->image) }}" class="card-img-top" width="24" height="400" />
                         </div>
                                 <div class="card-body">
                                     <div class="item-wrapper">
-                                        <div class="item-rating">
-                                            <div class="badge badge-primary badge-md">
-                                                <span>4</span> <i class="feather icon-star"></i>
-                                            </div>
-                                        </div>
                                         <div>
                                             <h6 class="item-price">
                                             {{ $item->price }} Baht
@@ -215,19 +210,11 @@
                                 </div>
                                 <div class="item-options text-center">
                                     <div class="item-wrapper">
-                                        <div class="item-rating">
-                                            <div class="badge badge-primary badge-md">
-                                                <span>4</span> <i class="feather icon-star"></i>
-                                            </div>
-                                        </div>
                                         <div class="item-cost">
                                             <h6 class="item-price">
                                             {{ $item->price }} Baht
                                             </h6>
                                         </div>
-                                    </div>
-                                    <div class="wishlist">
-                                        <i class="fa fa-heart-o"></i> <span>Wishlist</span>
                                     </div>
                                     <div class="cart">
                                         <i class="feather icon-shopping-cart"></i> <span class="add-to-cart">Add to
