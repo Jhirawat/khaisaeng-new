@@ -514,7 +514,7 @@
                                 href=""><i class="feather icon-circle" style="font-size: 1.2rem;"></i><span
                                     class="menu-item" data-i18n="Shop">เพิ่มสินค้า</span></a>
                         </li>
-                        
+
                     </ul>
                 </li>
                 <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item">
@@ -685,3 +685,4 @@
 <!-- END: Body-->
 
 </html>
+

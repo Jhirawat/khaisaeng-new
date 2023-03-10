@@ -1,4 +1,4 @@
-@extends('layouts.main_admin')
+@extends('layouts.main_user')
 
 @section('head')
 @endsection
@@ -193,7 +193,7 @@
                         </div>
                                 <div class="card-body">
                                     <div class="item-wrapper">
-                                     
+
                                         <div>
                                             <h6 class="item-price">
                                             {{ $item->price }} Baht
