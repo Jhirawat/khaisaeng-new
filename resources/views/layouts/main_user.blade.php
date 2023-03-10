@@ -325,14 +325,15 @@
                             </ul>
                         </li>
 
+
                         <li class="dropdown dropdown-user nav-item"><a
                                 class="dropdown-toggle nav-link dropdown-user-link" href="#"
                                 data-toggle="dropdown">
                                 <div class="user-nav d-sm-flex d-none"><span
-                                        class="user-name text-bold-600">{{ Auth::user() }} </span><span
-                                        class="user-status"><i
-                                            class="fa fa-circle font-small-3 text-success mr-50"></i> ใช้งานอยู่</span>
+                                        class="user-name text-bold-600">{{ Auth::user() }} </span>
                                 </div><span>
+                                    <img class="round"src="https://i.pinimg.com/564x/a5/e8/1f/a5e81f19cf2c587876fd1bb08ae0249f.jpg"
+                                        alt="avatar"height="40" width="40">
                                     {{-- @if (Auth::user()->emimg != null)
                                         <img class="round"src="{{ asset('imguse/' . Auth::user()) }}"
                                             alt="avatar"height="40" width="40">
@@ -496,8 +497,8 @@
                             style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
                             style="font-size: 18px">หน้าหลัก</span></a>
                 </li>
-                <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a
-                    href="{{ route('products') }}"><i class="fa fa-shopping-basket"
+                <li class="{{ Request::routeIs('cart.user') ? 'active' : '' }} nav-item"><a
+                    href="{{ route('cart.user') }}"><i class="fa fa-shopping-basket"
                         style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
                         style="font-size: 18px">ตะกร้าสินค้า</span></a>
             </li>

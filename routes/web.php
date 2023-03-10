@@ -78,3 +78,4 @@ Route::put('address-update', [App\Http\Controllers\AddressController::class, 'up
 //user
 
 Route::get('/home', [App\Http\Controllers\ProductController::class, 'product'])->name('products');
+Route::get('/cart', [App\Http\Controller\CartController::class, 'index'])->name('cart.user');
