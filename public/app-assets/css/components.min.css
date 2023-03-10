@@ -418,7 +418,7 @@ body.fixed-footer footer.footer-dark {
 .main-menu.menu-light .navigation > li.active > a {
     background: -webkit-linear-gradient(
         332deg,
-        #7367f0,
+        #aa550a,
         rgba(115, 103, 240, 0.7)
     );
     background: linear-gradient(118deg, #7367f0, rgba(115, 103, 240, 0.7));
