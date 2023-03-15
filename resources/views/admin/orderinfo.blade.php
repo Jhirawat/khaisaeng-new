@@ -546,7 +546,7 @@
                     </div>
                     <!-- DataTable ends -->
 
-                    bar ends -->
+
                 </section>
                 <!-- Data list view end -->
 
@@ -557,17 +557,7 @@
 @endsection
 
 @section('script')
-{{-- <script src="../../../app-assets/js/scripts/ui/data-list-view.js"></script>
-<script src="../../../app-assets/js/core/app-menu.js"></script>
-<script src="../../../app-assets/js/core/app.js"></script>
-<script src="../../../app-assets/js/scripts/components.js"></script>
-<script src="../../../app-assets/vendors/js/extensions/dropzone.min.js"></script>
-<script src="../../../app-assets/vendors/js/tables/datatable/datatables.min.js"></script>
-<script src="../../../app-assets/vendors/js/tables/datatable/datatables.buttons.min.js"></script>
-<script src="../../../app-assets/vendors/js/tables/datatable/datatables.bootstrap4.min.js"></script>
-<script src="../../../app-assets/vendors/js/tables/datatable/buttons.bootstrap.min.js"></script>
-<script src="../../../app-assets/vendors/js/tables/datatable/dataTables.select.min.js"></script>
-<script src="../../../app-assets/vendors/js/tables/datatable/datatables.checkboxes.min.js"></script> --}}
+
 
 <script>
 $(document).ready(function() {

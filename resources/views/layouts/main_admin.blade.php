@@ -657,6 +657,7 @@
     <script src="{{ asset('app-assets/vendors/js/tables/datatable/datatables.bootstrap4.min.js') }}"></script>
     <script src="{{ asset('app-assets/vendors/js/forms/validation/jqBootstrapValidation.js') }}"></script>
     <script src="{{ asset('app-assets/vendors/js/forms/select/select2.full.min.js') }}"></script>
+    <script src="{{ asset('app-assets/js/scripts/ui/data-list-view.js ')}}"></script>
 
     <script src="{{ asset('app-assets/vendors/js/charts/echarts/echarts.min.js') }}"></script>
     <!-- END: Page Vendor JS-->

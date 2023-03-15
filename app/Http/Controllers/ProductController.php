@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\File;
 use Intervention\Image\ImageManagerStatic as Image;
 
 
+
 class ProductController extends Controller
 {
     /**
@@ -91,7 +92,6 @@ class ProductController extends Controller
             return redirect()->back()->with('error', 'ไม่สำเร็จ');
         }
     }
-
     /**
      * Display the specified resource.
      *
@@ -178,5 +178,13 @@ class ProductController extends Controller
         return $products;
     }
 
+
+    public function productList()
+    { {
+            $productss = Product::all();
+
+            return view('product', compact('productss'));
+        }
+    }
 }
 

@@ -2,9 +2,9 @@
 
 @section('style')
     <style>
-   .navbar-floating .header-navbar-shadow {
+        .navbar-floating .header-navbar-shadow {
             display: block;
-            background: linear-gradient(180deg, #524f4f00 44%, rgb(248 248 248 / 0%) 73%, rgba(255, 255, 255, 0))!important;
+            background: linear-gradient(180deg, #524f4f00 44%, rgb(248 248 248 / 0%) 73%, rgba(255, 255, 255, 0)) !important;
             padding-top: 2.2rem;
             background-repeat: repeat;
             width: 100%;
@@ -23,43 +23,135 @@
         <div class="content-wrapper">
             <div class="content-header row">
                 {{-- start form --}}
-                <div class="container-fluid mt-2">
-                    <div class="row mb-2">
-                        <div class="col-sm-6 ">
-                            <div class="container">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-8">
-                                        {{-- <form action="{{ route('store') }}" method="POST" enctype="multipart/form-data"> --}}
-                                        <form action="" method="POST" enctype="multipart/form-data">
-                                            @csrf
-                                            <label for="name" class="form-label">Name</label>
-                                            <input type="text" class="form-control" name="name"
-                                                placeholder="Product Name" />
-                                            <label for="image" class="form-label">Image</label>
-                                            <input type="file" class="form-control" name="image"
-                                                placeholder="Image URL" />
-                                            <label for="price" class="form-label">Price</label>
-                                            <input type="number" class="form-control" name="price" placeholder="Price" />
-                                            <label for="description" class="form-label">Description</label>
-                                            <textarea class="form-control" name="description" rows="3"></textarea>
-                                            <br />
-                                            <button class="btn btn-success" type="submit">Save</button>
-                                            <a href="/admin" class="btn btn-outline-light">Back to Admin</a>
-                                        </form>
-                                    </div>
+                <div class="col-lg-12 col-md-12">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div id="column-chartt"></div>
+                                <div class="col-md-8">
+
+
+
+
+                                    <section id="number-tabs">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h4 class="card-title">เพิ่มสินค้า</h4>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <div class="card-body">
+                                                            <form action="{{ route('store') }}" method="POST"
+                                                                enctype="multipart/form-data"
+                                                                class="number-tab-steps wizard-circle">
+                                                                <fieldset>
+                                                                    @csrf
+
+                                                                    <div class="row">
+                                                                        <div class="col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <label for="name"
+                                                                                    class="form-label">ชื่อรายการสินค้า
+                                                                                </label>
+                                                                                <input type="text" class="form-control"
+                                                                                    name="name"
+                                                                                    placeholder="ชื่อรายการสินค้า" />
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <label for="image"
+                                                                                    class="form-label">รูป</label>
+                                                                                <input type="file" class="form-control"
+                                                                                    name="image"
+                                                                                    placeholder="กดเพื่ออัพโหลรูป" />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="row">
+                                                                        <div class="col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <label for="price"
+                                                                                    class="form-label">ราคา</label>
+                                                                                <input type="number" class="form-control"
+                                                                                    name="price"
+                                                                                    placeholder="ราคาสินค้า" />
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <label for="category"
+                                                                                    class="form-label">ประเภท</label>
+                                                                                    <select class="form-control" name="category">
+                                                                                        <option>Audio</option>
+                                                                                        <option>Computers</option>
+                                                                                        <option>Fitness</option>
+                                                                                        <option>Appliance</option>
+                                                                                    </select>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+
+
+
+
+                                                                    <div class="row">
+                                                                        <div class="col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <label
+                                                                                    for="shortDescription1">รายละเอียด:</label>
+                                                                                <textarea name="description" rows="5" class="form-control"></textarea>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </fieldset>
+
+
+                                                                <button style="background-color: #257d0f ;color:white" class="btn"
+                                                                type="submit">Save</button>
+                                                            <a href="/dashboard.admin" style="background-color: #f46d13 ;color:white" class="btn">Back to
+                                                                Admin</a>
+
+
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
                                 </div>
                             </div>
-                        </div><!-- /.col -->
-                        <div class="col-sm-6">
-                        </div><!-- /.col -->
-                    </div><!-- /.row -->
-
-                </div>
+                        </div>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
             </div>
         </div>
     </div>
 @endsection
 
 @section('script')
-    <script></script>
+    <script>
+                function getData(data) {
+            let id = document.getElementById('id')
+            id.value = data.id;
+
+            let name = document.getElementById('name');
+            name.value = data.name;
+
+            let price = document.getElementById('price');
+            price.value = data.price;
+
+            let description = document.getElementById('description');
+            description.value = data.description;
+        }
+    </script>
 @endsection

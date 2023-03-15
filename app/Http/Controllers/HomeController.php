@@ -54,7 +54,7 @@ class HomeController extends Controller
     }
     public function create()
     {
-        return view('create');
+        return view('admin.create');
     }
 
     public function adminorder()

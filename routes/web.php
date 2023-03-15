@@ -31,6 +31,19 @@ Route::get('type-product-edit/{id}', [App\Http\Controllers\TypeProductController
 Route::put('type-product-update', [App\Http\Controllers\TypeProductController::class, 'update'])->name('update.type-product');
 Route::get('update-status-type-product', [App\Http\Controllers\TypeProductController::class, 'updatestatus'])->name('updatestatus.type-product');
 
+
+
+
+
+Route::get('/create', [App\Http\Controllers\HomeController::class, 'create'])->name('create');
+Route::post('/store', [App\Http\Controllers\ProductController::class, 'store'])->name('store');
+Route::get('/admin-show', [App\Http\Controllers\ProductController::class, 'show'])->name('admin.show');
+Route::post('/admin-update', [App\Http\Controllers\ProductController::class, 'update'])->name('admin.update');
+Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('adminhome');
+
+
+
+
 //orderlist
 
 Route::get('/product-list', [App\Http\Controllers\Dashboard\AdminController::class, 'productList'])->name('products.list');
@@ -78,4 +91,5 @@ Route::put('address-update', [App\Http\Controllers\AddressController::class, 'up
 //user
 
 Route::get('/home', [App\Http\Controllers\ProductController::class, 'product'])->name('products');
-Route::get('/cart', [App\Http\Controller\CartController::class, 'index'])->name('cart.user');
+Route::get('/checkout.out', [App\Http\Controllers\CheckoutController::class, 'index'])->name('checkout');
+Route::get('/order.info', [App\Http\Controllers\OrderInfoController::class, 'index'])->name('order.info');
