@@ -91,5 +91,4 @@ Route::put('address-update', [App\Http\Controllers\AddressController::class, 'up
 //user
 
 Route::get('/home', [App\Http\Controllers\ProductController::class, 'product'])->name('products');
-Route::get('/checkout.out', [App\Http\Controllers\CheckoutController::class, 'index'])->name('checkout');
-Route::get('/order.info', [App\Http\Controllers\OrderInfoController::class, 'index'])->name('order.info');
+Route::get('/cart', [App\Http\Controller\CartController::class, 'index'])->name('cart.user');

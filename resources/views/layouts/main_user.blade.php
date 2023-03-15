@@ -41,13 +41,22 @@
     <link rel="stylesheet" type="text/css"
         href="{{ asset('app-assets/vendors/css/tables/datatable/datatables.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/css/forms/select/select2.min.css') }}">
-    <link rel="stylesheet" type="text/css"href="../../../app-assets/css/core/menu/menu-types/horizontal-menu.css">
+    <link rel="stylesheet" type="text/css"href="{{ asset('app-assets/css/core/menu/menu-types/horizontal-menu.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/css/vendors.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/css/forms/spinner/jquery.bootstrap-touchspin.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/css/extensions/toastr.css') }}">
 
 
 
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/bootstrap-extended.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/colors.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/components.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/themes/dark-layout.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/themes/semi-dark-layout.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/bootstrap.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/bootstrap-extended.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/colors.css') }}">
@@ -72,6 +81,11 @@
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/pages/app-user.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/pages/aggrid.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/core/menu/menu-types/horizontal-menu.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/core/colors/palette-gradient.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/pages/app-ecommerce-shop.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/plugins/forms/wizard.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/plugins/extensions/toastr.css') }}">
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
@@ -514,6 +528,11 @@
                                 href=""><i class="feather icon-circle" style="font-size: 1.2rem;"></i><span
                                     class="menu-item" data-i18n="Shop">เพิ่มสินค้า</span></a>
                         </li>
+            <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a
+                    href="{{ route('address.user') }}"><i class="fa fa-map-marker"
+                        style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
+                        style="font-size: 18px">ที่อยู่</span></a>
+            </li>
 
                     </ul>
                 </li>
@@ -665,6 +684,7 @@
     <script src="{{ asset('app-assets/vendors/js/charts/chart.min.js') }}"></script>
     <script src="{{ asset('app-assets/vendors/js/charts/apexcharts.min.js') }}"></script>
     <script src="{{ asset('app-assets/js/scripts/charts/chart-chartjs.js') }}"></script>
+    <script src="{{ asset('app-assets/js/scripts/pages/app-ecommerce-shop.js') }}"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script type="text/javascript" src="{{ asset('bootstrap-datepicker-thai/js/bootstrap-datepicker.js') }}"></script>
