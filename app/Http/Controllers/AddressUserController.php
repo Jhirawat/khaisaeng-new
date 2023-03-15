@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Address;
+use App\Models\Product;
+use App\Models\AddressUser;
+use Illuminate\Console\View\Components\Alert;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AddressUserController extends Controller
 {
@@ -34,18 +37,27 @@ class AddressUserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Address  $address
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Address $address)
+public function store(Request $request)
+{
+    // $AddressUser = new AddressUser();
+
+    // $AddressUser->name = $request->input('name');
+    // $AddressUser->usernumber = $request->input('usernumber');
+    // $AddressUser->address = $request->input('apt-number');
+    // $AddressUser->address_addon = $request->input('addon');
+    // $AddressUser->district = $request->input('district');
+    // $AddressUser->pincode = $request->input('pincode');
+    // $AddressUser->province = $request->input('province');
+    // $AddressUser->add_type = $request->input('add-type');
+
+    // $AddressUser->save();
+
+    // return redirect()->route('user.address')->with('success', 'เพิ่มสำเสร็จ');
+}
+
+
+    public function show(AddressUser $address)
     {
         //
     }
@@ -53,10 +65,10 @@ class AddressUserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Address  $address
+     * @param  \App\Models\AddressUser  $address
      * @return \Illuminate\Http\Response
      */
-    public function edit(Address $address)
+    public function edit(AddressUSer $address)
     {
         //
     }
@@ -65,10 +77,10 @@ class AddressUserController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Address  $address
+     * @param  \App\Models\AddressUser  $address
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Address $address)
+    public function update(Request $request, AddressUSer $address)
     {
         //
     }
@@ -76,7 +88,7 @@ class AddressUserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Address  $address
+     * @param  \App\Models\AddressUSer  $address
      * @return \Illuminate\Http\Response
      */
     public function destroy(Address $address)

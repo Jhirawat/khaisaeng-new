@@ -22,7 +22,7 @@
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">หน้าหลัก</a>
                                     </li>
-                                    <li class="breadcrumb-item"><a href="#">ตะกร้าสินค้า</a>
+                                    <li class="breadcrumb-item active">ตะกร้าสินค้า
                                 </ol>
                             </div>
                         </div>
@@ -221,7 +221,7 @@
                                             </div>
                                             <div class="col-sm-6 offset-md-6">
                                                 <div class="btn btn-primary delivery-address float-right">
-                                                    บันทึกที่อยู่ และ ตรวจสอบการชำระเงิน
+                                                    <a href="{{ route('checkout') }}" style="color:#FFFFFF;"> บันทึกที่อยู่ และ ตรวจสอบการชำระเงิน</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -240,7 +240,9 @@
                                             <p>UTC-5: Eastern Standard Time (EST) </p>
                                             <p>202-555-0140</p>
                                             <hr>
-                                            <div class="btn btn-primary btn-block delivery-address">เลือกที่อยู่นี้</div>
+                                            <div class="btn btn-primary btn-block delivery-address">
+                                                <a href="{{ route('checkout') }}" style="color:#FFFFFF;">เลือกที่อยู่นี้</a>
+                                                </div>
                                         </div>
                                     </div>
                                 </div>
