@@ -531,11 +531,11 @@
                             class="menu-title" data-i18n="Calender"style="font-size: 18px; ">ประวัตืการสั้งซื้อ
                         </span></a>
                     <ul class="menu-content">
-                        <li class="{{ Request::routeIs('employee') ? 'active' : '' }} nav-item"><a href="{{ route('listhis') }}"><i
+                        <li class="{{ Request::routeIs('listhis') ? 'active' : '' }} nav-item"><a href="{{ route('listhis') }}"><i
                                     class="feather icon-circle" style="font-size: 1.2rem;"></i><span
                                     class="menu-item">ประวัตืการสั้งซื้อ</span></a>
                         </li>
-                        <li class="{{ Request::routeIs('addEmployee1') ? 'active' : '' }} nav-item"><a
+                        <li class="{{ Request::routeIs('billUserList') ? 'active' : '' }} nav-item"><a
                                 href="{{ route('billUserList') }}"><i class="feather icon-circle" style="font-size: 1.2rem;"></i><span
                                     class="menu-item">ใบเสร็จ</span></a>
                         </li>

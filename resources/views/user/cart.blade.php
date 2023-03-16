@@ -47,8 +47,6 @@
                                             <div class="item-name">
                                                 <a href="app-ecommerce-details.html">Amazon - Fire TV Stick with Alexa Voice Remote - Black</a>
                                                 <span></span>
-                                                <p class="item-company">By <span class="company-name">Amazon</span></p>
-                                                <p class="stock-status-in">In Stock</p>
                                             </div>
                                             <div class="item-quantity">
                                                 <p class="quantity-title">Quantity</p>
@@ -56,31 +54,22 @@
                                                     <input type="text" class="quantity-counter" value="1">
                                                 </div>
                                             </div>
-                                            <p class="delivery-date">Delivery by, Wed Apr 25</p>
-                                            <p class="offers">17% off 4 offers Available</p>
+                                            <p class="delivery-date">รายละเอียดเพิ่มเติม</p>
                                         </div>
                                         <div class="item-options text-center">
                                             <div class="item-wrapper">
-                                                <div class="item-rating">
-                                                    <div class="badge badge-primary badge-md">
-                                                        4 <i class="feather icon-star ml-25"></i>
-                                                    </div>
-                                                </div>
                                                 <div class="item-cost">
                                                     <h6 class="item-price">
                                                         $39.99
                                                     </h6>
                                                     <p class="shipping">
-                                                        <i class="feather icon-shopping-cart"></i> Free Shipping
+                                                        <i class="feather icon-shopping-cart"></i> ส่งฟรี
                                                     </p>
                                                 </div>
                                             </div>
                                             <div class="wishlist remove-wishlist">
-                                                <i class="feather icon-x align-middle"></i> Remove
-                                            </div>
-                                            <div class="cart remove-wishlist">
-                                                <i class="fa fa-heart-o mr-25"></i> Wishlist
-                                            </div>
+                                                <i class="feather icon-x align-middle"></i> ลบจากรายการ
+                                            </div>  
                                         </div>
                                     </div>
                                 </div>
@@ -96,7 +85,7 @@
                                             </div>
                                             <div class="detail">
                                                 <div class="detail-title">
-                                                    Total MRP
+                                                    Total
                                                 </div>
                                                 <div class="detail-amt">
                                                     $598
@@ -162,7 +151,7 @@
                                             </div>
                                             <div class="col-md-6 col-sm-12">
                                                 <div class="form-group">
-                                                    <label for="checkout-city">ตำบล/แขวง:</label>
+                                                    <label for="checkout-city">ตำบล/อำเภอ:</label>
                                                     <input type="text" id="checkout-city" class="form-control required" name="city">
                                                 </div>
                                             </div>

@@ -78,7 +78,7 @@
                                             </div>
                                             <div class="col-md-6 col-sm-12">
                                                 <div class="form-group">
-                                                    <label for="checkout-city">ตำบล/แขวง:</label>
+                                                    <label for="checkout-city">ตำบล/อำเภอ:</label>
                                                     <input type="text" class="form-control required"
                                                      name="district">
                                                 </div>
@@ -112,7 +112,7 @@
                                 </div>
                                 </fieldset>
                                 <button style="background-color: #257d0f ;color:white" class="btn" 
-                                href="{{ route('showAddress') }}"  
+                                href=""  
                                 type="submit">บันทึกที่อยู่</button>
                                          </div>
                                  </form>

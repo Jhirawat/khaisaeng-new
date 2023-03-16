@@ -39,14 +39,6 @@
                     </div>
                 </div>
             </div>
-            <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
-                <div class="form-group breadcrum-right">
-                    <div class="dropdown">
-                        <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="feather icon-settings"></i></button>
-                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Chat</a><a class="dropdown-item" href="#">Email</a><a class="dropdown-item" href="#">Calendar</a></div>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="content-body">
             
@@ -59,93 +51,39 @@
                             <div class="payment-type">
                                 <div class="card">
                                     <div class="card-header flex-column align-items-start">
-                                        <h4 class="card-title">Payment options</h4>
-                                        <p class="text-muted mt-25">Be sure to click on correct payment option</p>
+                                        <h4 class="card-title">ตัวเลือกชำระเงิน</h4>
+                                        <p class="text-muted mt-25">โปรดเลือกวิธีการชำระเงินที่ต้องการ</p>
                                     </div>
                                     <div class="card-content">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between flex-wrap">
-                                                <div class="vs-radio-con vs-radio-primary">
-                                                    <input type="radio" name="vueradio" checked="" value="false">
-                                                    <span class="vs-radio">
-                                                        <span class="vs-radio--border"></span>
-                                                        <span class="vs-radio--circle"></span>
-                                                    </span>
-                                                    <img src="../../../app-assets/images/pages/eCommerce/bank.png" alt="img-placeholder" height="40">
-                                                    <span>US Unlocked Debit Card 12XX XXXX XXXX 0000
-                                                    </span>
-                                                </div>
-                                                <div class="card-holder-name mt-75">
-                                                    John Doe
-                                                </div>
-                                                <div class="card-expiration-date mt-75">
-                                                    11/2020
-                                                </div>
-                                            </div>
-                                            <div class="customer-cvv mt-1">
-                                                <div class="form-inline">
-                                                    <label class="mb-50" for="card-holder-cvv">Enter CVV:</label>
-                                                    <input type="number" class="form-control ml-75 mb-50 input-cvv" id="card-holder-cvv">
-                                                    <div class="btn btn-primary btn-cvv ml-50 mb-50">Continue</div>
-                                                </div>
-                                            </div>
-                                            <hr class="my-2">
+                                        <div class="card-body">   
                                             <ul class="other-payment-options list-unstyled">
                                                 <li>
                                                     <div class="vs-radio-con vs-radio-primary py-25">
-                                                        <input type="radio" name="vueradio" value="false">
+                                                        <input type="radio" name="vueradio" value="false" id="qrcode">
                                                         <span class="vs-radio">
                                                             <span class="vs-radio--border"></span>
                                                             <span class="vs-radio--circle"></span>
                                                         </span>
                                                         <span>
-                                                            Credit / Debit / ATM Card
+                                                            แสกน QR Code
                                                         </span>
                                                     </div>
                                                 </li>
                                                 <li>
-                                                    <div class="vs-radio-con vs-radio-primary py-25">
-                                                        <input type="radio" name="vueradio" value="false">
-                                                        <span class="vs-radio">
-                                                            <span class="vs-radio--border"></span>
-                                                            <span class="vs-radio--circle"></span>
-                                                        </span>
-                                                        <span>
-                                                            Net Banking
-                                                        </span>
-                                                    </div>
-                                                </li>
                                                 <li>
                                                     <div class="vs-radio-con vs-radio-primary py-25">
-                                                        <input type="radio" name="vueradio" value="false">
+                                                        <input type="radio" name="vueradio" value="false" id="cash">
                                                         <span class="vs-radio">
                                                             <span class="vs-radio--border"></span>
                                                             <span class="vs-radio--circle"></span>
                                                         </span>
                                                         <span>
-                                                            EMI (Easy Installment)
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="vs-radio-con vs-radio-primary py-25">
-                                                        <input type="radio" name="vueradio" value="false">
-                                                        <span class="vs-radio">
-                                                            <span class="vs-radio--border"></span>
-                                                            <span class="vs-radio--circle"></span>
-                                                        </span>
-                                                        <span>
-                                                            Cash On Delivery
+                                                            เก็บเงินปลายทาง
                                                         </span>
                                                     </div>
                                                 </li>
                                             </ul>
-                                            <hr>
-                                            <div class="gift-card">
-                                                <p><i class="feather icon-plus-square mr-25 font-medium-5"></i>
-                                                    Add Gift Card
-                                                </p>
-                                            </div>
+                                            <div class="btn btn-primary btn-cvv ml-50 mb-50" href="">Continue</div>
                                         </div>
                                     </div>
                                 </div>
@@ -157,16 +95,16 @@
                                     </div>
                                     <div class="card-content">
                                         <div class="card-body">
-                                            <div class="detail">
-                                                <div class="details-title">
-                                                    Price of 3 items
+                                        <div class="detail">
+                                                <div class="detail-title">
+                                                    Total
                                                 </div>
                                                 <div class="detail-amt">
-                                                    <strong>$699.30</strong>
+                                                    $598
                                                 </div>
                                             </div>
                                             <div class="detail">
-                                                <div class="details-title">
+                                                <div class="detail-title">
                                                     Delivery Charges
                                                 </div>
                                                 <div class="detail-amt discount-amt">
