@@ -82,6 +82,28 @@
                                                                             </div>
                                                                         </div>
 
+
+
+
+{{--
+                                                                        <form action="{{ route('select-type') }}" method="GET">
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <label for="price" class="form-label">ราคา</label>
+
+                                                                                    <select name='type' id="type">
+                                                                                        <option value="">กรุณาเลือกประเภทสินค้า</option>
+                                                                                        @foreach ($type as $pro)
+                                                                                        <option value="{{ $pro->id }}">{{ $pro->type_name }}</option>
+                                                                                        @endforeach
+                                                                                    </select>
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </form> --}}
+
+
+
                                                                         <div class="col-sm-6">
                                                                             <div class="form-group">
                                                                                 <label for="category"
@@ -95,7 +117,13 @@
 
                                                                             </div>
                                                                         </div>
+
+
                                                                     </div>
+
+
+
+
 
 
 
@@ -114,10 +142,14 @@
                                                                 </fieldset>
 
 
-                                                                <button style="background-color: #257d0f ;color:white" class="btn"
-                                                                type="submit">Save</button>
-                                                            <a href="/dashboard.admin" style="background-color: #f46d13 ;color:white" class="btn">Back to
-                                                                Admin</a>
+
+
+                                                                <button style="background-color: #257d0f ;color:white"
+                                                                    class="btn" type="submit">Save</button>
+                                                                <a href="/dashboard.admin"
+                                                                    style="background-color: #f46d13 ;color:white"
+                                                                    class="btn">Back to
+                                                                    Admin</a>
 
 
                                                             </form>
@@ -140,7 +172,7 @@
 
 @section('script')
     <script>
-                function getData(data) {
+        function getData(data) {
             let id = document.getElementById('id')
             id.value = data.id;
 
