@@ -92,8 +92,9 @@ Route::put('address-update', [App\Http\Controllers\AddressController::class, 'up
 //user
 
 Route::get('/home', [App\Http\Controllers\ProductController::class, 'product'])->name('products');
-Route::get('/cart', [App\Http\Controller\CartController::class, 'index'])->name('cart.user');
-Route::get('/address-user', [App\Http\Controllers\AddressUserController::class, 'index'])->name('address.user');
+Route::get('/cart', [App\Http\Controllers\CartController::class, 'index'])->name('cart.user');
+Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'index'])->name('checkout');
+Route::get('/history-shopping', [App\Http\Controllers\ListUserHisController::class, 'index'])->name('listhis');
 
 //user-address
 Route::get('/address-user', [App\Http\Controllers\AddressUserController::class, 'show'])->name('showAddress');
