@@ -519,7 +519,7 @@
                
                         </li>
             <li class="{{ Request::routeIs('') ? 'active' : '' }} nav-item"><a
-                    href="{{ route('address.user') }}"><i class="fa fa-map-marker"
+                    href="{{ route('showAddress') }}"><i class="fa fa-map-marker"
                         style="margin-top: 3px;"></i><span class="menu-title" data-i18n="Email"
                         style="font-size: 18px">ที่อยู่</span></a>
             </li>
@@ -531,7 +531,7 @@
                             class="menu-title" data-i18n="Calender"style="font-size: 18px; ">ประวัตืการสั้งซื้อ
                         </span></a>
                     <ul class="menu-content">
-                        <li class="{{ Request::routeIs('employee') ? 'active' : '' }} nav-item"><a href=""><i
+                        <li class="{{ Request::routeIs('employee') ? 'active' : '' }} nav-item"><a href="{{ route('listhis') }}"><i
                                     class="feather icon-circle" style="font-size: 1.2rem;"></i><span
                                     class="menu-item">ประวัตืการสั้งซื้อ</span></a>
                         </li>

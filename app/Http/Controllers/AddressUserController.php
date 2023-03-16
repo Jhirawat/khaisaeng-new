@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
 use App\Models\AddressUser;
 use Illuminate\Console\View\Components\Alert;
 use Illuminate\Http\Request;
@@ -26,40 +25,36 @@ class AddressUserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+
+
+
+    public function store(Request $request)
     {
-        //
+        DB::beginTransaction();
+        $AddressUser = new AddressUser();
+
+        $AddressUser->name = $request->name;
+        $AddressUser->address = $request->address;
+        $AddressUser->address_addon = $request->address_addon;
+        $AddressUser->district = $request->district;
+        $AddressUser->province = $request->name;
+        $AddressUser->phone = $request->name;
+        $AddressUser->province_code = $request->province_code;
+        $AddressUser->address_type = $request->address_type;
+
+        $AddressUser->save();
+        DB::commit();
+
+        return redirect()->route('user.address')->with('success', 'เพิ่มสำเสร็จ');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
 
-public function store(Request $request)
-{
-    // $AddressUser = new AddressUser();
+    public function show()
+    { {
+            $showAddress = AddressUser::all();
 
-    // $AddressUser->name = $request->input('name');
-    // $AddressUser->usernumber = $request->input('usernumber');
-    // $AddressUser->address = $request->input('apt-number');
-    // $AddressUser->address_addon = $request->input('addon');
-    // $AddressUser->district = $request->input('district');
-    // $AddressUser->pincode = $request->input('pincode');
-    // $AddressUser->province = $request->input('province');
-    // $AddressUser->add_type = $request->input('add-type');
-
-    // $AddressUser->save();
-
-    // return redirect()->route('user.address')->with('success', 'เพิ่มสำเสร็จ');
-}
-
-
-    public function show(AddressUser $address)
-    {
-        //
+            return view('user.address', compact('showAddress'));
+        }
     }
 
     /**

@@ -58,7 +58,7 @@
                                                 <div class="form-group">
                                                     <label for="checkout-number">หมายเลขโทรศัพท์:</label>
                                                     <input type="number" class="form-control required" 
-                                                    name="usernumber">
+                                                    name="phone">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-sm-12">
@@ -72,7 +72,7 @@
                                                 <div class="form-group">
                                                     <label for="checkout-landmark">รายละเอียดเพิ่มเติม:</label>
                                                     <input type="text" class="form-control required" 
-                                                    name="addon">
+                                                    name="address_addon">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-sm-12">
@@ -87,7 +87,7 @@
                                                     <label for="checkout-pincode">รหัสไปรษณีย์:</label>
 
                                                     <input type="number" class="form-control required" 
-                                                    name="pincode">
+                                                    name="province_code">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-sm-12">
@@ -112,36 +112,64 @@
                                 </fieldset>
                                 <button style="background-color: #257d0f ;color:white" class="btn"
                                                                 type="submit">บันทึกที่อยู่</button>
-                                </div>
-                            </form>
-                            <div class="customer-card">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title">John Doe</h4>
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="card-body actions">
-                                            <p class="mb-0">9447 Glen Eagles Drive</p>
-                                            <p>Lewis Center, OH 43035</p>
-                                            <p>UTC-5: Eastern Standard Time (EST) </p>
-                                            <p>202-555-0140</p>
-                                            <hr>
-                                            <div class="btn btn-primary btn-block delivery-address">แก้ไขที่อยู่</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </fieldset>
-
+                                         </div>
+                                 </form>
+                            
+                            </section>
+                        </fieldset>
+                    </form>
                     <!-- Checkout Customer Address Ends -->
 
-                </form>
+                     
+                     <div class="row justify-content-center">
+                         <div class="col-12">
+                     <section id="ecommerce-products" class="grid-view">
+                        <div class="row">
+
+                   @forEach ($showAddress as $add)
+                        <div class="col" style="margin-top: 25px;" >
+                        <div class="card ecommerce-card" style="width: 24rem">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="item-wrapper">
+                                       
+                                        <div class="card-header">
+                                        <h4 class="card-title">{{ $add->name }}</h4>
+                                  
+                                        </div>
+                                        
+                                    </div>
+                                    <hr>
+                                    <p class="mb-0">{{ $add->address }}  {{ $add->address_addon}}</p>
+                                    <div>
+                                    <p class="mb-0">{{ $add->district }} {{ $add->province }}</p>
+                                    </div>
+                                    <div>
+                                    <p>{{ $add->province_code }} </p>
+                                    </div>
+                                    <div>
+                                    <p>{{ $add->phone }}</p>
+                                    </div>
+                                    <hr>
+                                            <div class="btn btn-primary btn-block delivery-address">แก้ไขที่อยู่</div>
+                                </div>
+                                
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        @endforeach
+      
+                        </div>
+                    </section>
+                        </div></div></div>
+                
 
             </div>
         </div>
     </div>
-    </div>
+    
 @endsection
 
 @section('script')
@@ -150,28 +178,26 @@
             let name = document.getElementById('name')
             name.value = data.name;
 
-            let usernumber = document.getElementById('usernumber')
-            usernumber.value = data.usernumber;
+            let phone = document.getElementById('phone')
+            phone.value = data.phone;
 
-            let apt_number = document.getElementById('apt-number')
-            apt_number.value = data.apt_number;
+            let address = document.getElementById('apt-number')
+            address.value = data.address;
 
-            let addon = document.getElementById('addon')
-            addon.value = data.addon;
+            let address_addon = document.getElementById('address_addon')
+            address_addon.value = data.address_addon;
 
             let district = document.getElementById('district')
             district.value = data.district;
 
-            let pincode = document.getElementById('pincode')
-            pincode.value = data.pincode;
+            let province_code = document.getElementById('province_code')
+            province_code.value = data.province_code;
 
             let province = document.getElementById('province')
             province.value = data.province;
 
-            let add_type = document.getElementById('add-type')
-            add_type.value = data.add_type;
-        
-            
+            let address_type = document.getElementById('add-type')
+            address_type.value = data.address_type;  
     }
     console.log(data);
 </script>

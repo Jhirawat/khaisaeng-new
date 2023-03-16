@@ -89,15 +89,7 @@
                                 <div class="card">
                                     <div class="card-content">
                                         <div class="card-body">
-                                            <!-- <p class="options-title">Options</p>
-                                            <div class="coupons">
-                                                <div class="coupons-title">
-                                                    <p>Coupons</p>
-                                                </div>
-                                                <div class="apply-coupon">
-                                                    <p>Apply</p>
-                                                </div>
-                                            </div> -->
+
                                             
                                             <div class="price-details">
                                                 <p>Price Details</p>
