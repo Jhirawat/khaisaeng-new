@@ -40,10 +40,8 @@
                                     <h4 class="card-title">เพิ่มที่อยู่ใหม่</h4>
                                     <!-- <p class="text-muted mt-25">Be sure to check "Deliver to this address" when you have finished</p> -->
                                 </div>
-                                <form action="{{ route('store.useraddress') }}"
-                                method="POST" enctype="multipart/form-data">
-                                <fieldset>
-                                    @csrf
+                                <form action="{{ route('store.useraddress') }}" method="POST" enctype="multipart/form-data">
+                                <fieldset>                       
                                 <div class="card-content">
                                     <div class="card-body">
                                         <div class="row">
@@ -65,7 +63,7 @@
                                                 <div class="form-group">
                                                     <label for="checkout-apt-number">บ้านเลขที่:</label>
                                                     <input type="text" class="form-control required" 
-                                                    name="apt-number">
+                                                    name="address">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-sm-12">
@@ -100,7 +98,7 @@
                                             <div class="col-md-6 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="add-type">ประเภทสถานที่:</label>
-                                                    <select class="form-control" name="add-type">
+                                                    <select class="form-control" name="address_type">
                                                         <option>บ้าน</option>
                                                         <option>สำนักงาน</option>
                                                     </select>
@@ -181,7 +179,7 @@
             let phone = document.getElementById('phone')
             phone.value = data.phone;
 
-            let address = document.getElementById('apt-number')
+            let address = document.getElementById('address')
             address.value = data.address;
 
             let address_addon = document.getElementById('address_addon')
@@ -196,7 +194,7 @@
             let province = document.getElementById('province')
             province.value = data.province;
 
-            let address_type = document.getElementById('add-type')
+            let address_type = document.getElementById('address_type')
             address_type.value = data.address_type;  
     }
     console.log(data);

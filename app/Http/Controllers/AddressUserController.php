@@ -30,6 +30,7 @@ class AddressUserController extends Controller
 
     public function store(Request $request)
     {
+      try { 
         DB::beginTransaction();
         $AddressUser = new AddressUser();
 
@@ -37,16 +38,24 @@ class AddressUserController extends Controller
         $AddressUser->address = $request->address;
         $AddressUser->address_addon = $request->address_addon;
         $AddressUser->district = $request->district;
-        $AddressUser->province = $request->name;
-        $AddressUser->phone = $request->name;
+        $AddressUser->province = $request->province;
+        $AddressUser->phone = $request->phone;
         $AddressUser->province_code = $request->province_code;
         $AddressUser->address_type = $request->address_type;
 
         $AddressUser->save();
         DB::commit();
 
-        return redirect()->route('user.address')->with('success', 'เพิ่มสำเสร็จ');
-    }
+        return redirect()->route('showAddress');
+   } catch (\Throwable $th) {
+    DB::rollback();
+    return response()->json([
+        'successful' => False,
+        'msg' => $th->getMessage()
+    ]);
+    return redirect()->back()->with('error', 'ไม่สำเร็จ');
+}
+}
 
 
     public function show()

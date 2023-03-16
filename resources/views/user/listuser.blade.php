@@ -19,31 +19,29 @@
 @section('content')
 <div class="app-content content">
     <div class="content-wrapper">
-        <div class="content-header row justify-content-center">
+        <div class="content-header">
             {{-- start form --}}
             <div class="content-body">
                 <!-- Data list view starts -->
                 <section id="data-list-view" class="data-list-view-header">
+                
                     
 
                     <!-- DataTable starts -->
                     <div class="table-responsive">
                         <table class="table data-list-view">
+                        <h2>ประวัติรายการคำสั่งซื้อ</h2>
                             <thead>
                                 <tr>
-                                    <th></th>
-                                    <th>NAME</th>
-                                    <th>CATEGORY</th>
+
+                                    <th class="col-6">เลขรายการสินค้า</th>
                                     <th>ORDER STATUS</th>
-                                    <th>PRICE</th>
-                                    <th>ACTION</th>
+                                    <th class="col-2">รายละเอียดเพิ่มเติม</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td></td>
-                                    <td class="product-name">Apple Watch series 4 GPS</td>
-                                    <td class="product-category">Computers</td>
+                                    <td class="product-name">CNX1603256605481891</td>
                                   
                                     <td>
                                         <div class="chip chip-warning">
@@ -52,11 +50,9 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="product-price">$69.99</td>
-                                    <td class="product-action">
-                                        <span class="action-edit"><i class="feather icon-edit"></i></span>
-                                        <span class="action-delete"><i class="feather icon-trash"></i></span>
-                                    </td>
+                                    <td class="product-price"><div class="btn btn-primary btn-block delivery-address">
+                                                <a href="" style="color:#FFFFFF;">เพิ่มเติม</a>
+                                                </div></td>
                                 </tr>
                                 
                             </tbody>
