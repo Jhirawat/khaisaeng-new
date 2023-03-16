@@ -104,30 +104,6 @@
                                             </div>
                                             <div class="detail">
                                                 <div class="detail-title">
-                                                    Bag Discount
-                                                </div>
-                                                <div class="detail-amt discount-amt">
-                                                    -25$
-                                                </div>
-                                            </div>
-                                            <div class="detail">
-                                                <div class="detail-title">
-                                                    Estimated Tax
-                                                </div>
-                                                <div class="detail-amt">
-                                                    $1.3
-                                                </div>
-                                            </div>
-                                            <div class="detail">
-                                                <div class="detail-title">
-                                                    EMI Eligibility
-                                                </div>
-                                                <div class="detail-amt emi-details">
-                                                    Details
-                                                </div>
-                                            </div>
-                                            <div class="detail">
-                                                <div class="detail-title">
                                                     Delivery Charges
                                                 </div>
                                                 <div class="detail-amt discount-amt">

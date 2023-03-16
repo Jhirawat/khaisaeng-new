@@ -536,7 +536,7 @@
                                     class="menu-item">ประวัตืการสั้งซื้อ</span></a>
                         </li>
                         <li class="{{ Request::routeIs('addEmployee1') ? 'active' : '' }} nav-item"><a
-                                href=""><i class="feather icon-circle" style="font-size: 1.2rem;"></i><span
+                                href="{{ route('billUserList') }}"><i class="feather icon-circle" style="font-size: 1.2rem;"></i><span
                                     class="menu-item">ใบเสร็จ</span></a>
                         </li>
                     </ul>

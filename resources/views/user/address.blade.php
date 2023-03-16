@@ -108,8 +108,9 @@
                                     </div>
                                 </div>
                                 </fieldset>
-                                <button style="background-color: #257d0f ;color:white" class="btn"
-                                                                type="submit">บันทึกที่อยู่</button>
+                                <button style="background-color: #257d0f ;color:white" class="btn" 
+                                href="{{ route('showAddress') }}"  
+                                type="submit">บันทึกที่อยู่</button>
                                          </div>
                                  </form>
                             

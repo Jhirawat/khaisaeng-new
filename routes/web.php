@@ -95,7 +95,11 @@ Route::get('/home', [App\Http\Controllers\ProductController::class, 'product'])-
 Route::get('/cart', [App\Http\Controllers\CartController::class, 'index'])->name('cart.user');
 Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'index'])->name('checkout');
 Route::get('/history-shopping', [App\Http\Controllers\ListUserHisController::class, 'index'])->name('listhis');
+Route::get('/List-Bill', [App\Http\Controllers\BillUserController::class, 'index'])->name('billUserList');
 
 //user-address
 Route::get('/address-user', [App\Http\Controllers\AddressUserController::class, 'show'])->name('showAddress');
 Route::post('/address-user-store', [App\Http\Controllers\AddressUserController::class, 'store'])->name('store.useraddress');
+
+//user-Bill
+Route::get('/Bill-Info', [App\Http\Controllers\BillUserInfoController::class, 'index'])->name('billUserInfo');
