@@ -16,6 +16,10 @@
 </style>
 @endsection
 
+@section('head')
+<title>ชำระเงิน</title>
+@endsection
+
 @section('content')
 <div class="app-content content">
     <div class="content-wrapper">

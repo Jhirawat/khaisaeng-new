@@ -5,6 +5,9 @@
 
 </style>
 @endsection
+@section('head')
+<title>ที่อยู่</title>
+@endsection
 
 @section('content')
 

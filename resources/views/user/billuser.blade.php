@@ -1,5 +1,9 @@
 @extends('layouts.main_user')
 
+@section('head')
+<title>รายการใบเสร็จ</title>
+@endsection
+
 @section('style')
 <style>
     .navbar-floating .header-navbar-shadow {

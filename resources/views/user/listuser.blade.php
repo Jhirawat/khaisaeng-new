@@ -16,6 +16,10 @@
 </style>
 @endsection
 
+@section('head')
+<title>ประวัติรายการคำสั่งซื้อ</title>
+@endsection
+
 @section('content')
 <div class="app-content content">
     <div class="content-wrapper">

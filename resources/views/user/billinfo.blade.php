@@ -16,6 +16,10 @@
     </style>
 @endsection
 
+@section('head')
+<title>รายละเอียดใบเสร็จ</title>
+@endsection
+
 @section('content')
     {{-- start form --}}
     <div class="app-content content">

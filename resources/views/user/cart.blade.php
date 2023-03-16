@@ -6,7 +6,7 @@
 @endsection
 
 @section('head')
-
+<title>ตะกร้าสินค้า</title>
 @endsection
 
 @section('content')
