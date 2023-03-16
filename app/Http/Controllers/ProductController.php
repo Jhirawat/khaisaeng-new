@@ -7,6 +7,7 @@ use Illuminate\Console\View\Components\Alert;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
+
 use Intervention\Image\ImageManagerStatic as Image;
 
 
@@ -179,12 +180,38 @@ class ProductController extends Controller
     }
 
 
-    public function productList()
-    { {
-            $productss = Product::all();
+    // public function select()
+    // {
+    //     $type = DB::table('type_product')->select('id', 'type_name')->get();
+    //     return view('admin.create', ['data' => $type]);
+    // }
 
-            return view('product', compact('productss'));
-        }
+
+    // public function select()
+    // {
+    //     $type =DB::table('type_product')->select('id','type_name')->get();
+    //     return view('admin.create',compact('type'));
+    // }
+
+    public function type()
+    {
+        $type = DB::table('type_product')->select('id', 'type_name')->get();
+        return view('admin.create', compact('type'));
     }
+
+
+    // public function productList()
+    // { {
+    //         $productss = Product::all();
+
+    //         return view('product', compact('productss'));
+    //     }
+    // }
+
+
+//    public function type($type)
+//    {
+//     $type = DB::table('type_products')->get();
+//    }
 }
 
