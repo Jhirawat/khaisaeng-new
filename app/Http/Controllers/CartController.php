@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AddressUser;
 use Illuminate\Http\Request;
 
 
@@ -22,6 +23,14 @@ class CartController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function show()
+    { {
+            $showAddress = AddressUser::all();
+
+            return view('user.cart', compact('showAddress'));
+        }
+    }
     public function create()
     {
         //
@@ -40,17 +49,6 @@ class CartController extends Controller
 
     /**
      * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response

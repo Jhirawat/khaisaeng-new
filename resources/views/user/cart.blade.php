@@ -114,106 +114,150 @@
                     <!-- Checkout Place order Ends -->
 
                     <!-- Checkout Customer Address Starts -->
-                    <h6><i class="step-icon step feather icon-home"></i> เลือกที่อยู่</h6>
                     <fieldset class="checkout-step-2 px-0">
                         <section id="checkout-address" class="list-view product-checkout">
                             <div class="card">
                                 <div class="card-header flex-column align-items-start">
-                                    <h4 class="card-title">เพิ่มที่อยู่ใหม่</h4>
-                                    <!-- <p class="text-muted mt-25">Be sure to check "Deliver to this address" when you have finished</p> -->
-                                </div>
-                                <div class="card-content">
+                    <h6><i class="step-icon step feather icon-home"></i> เลือกที่อยู่</h6>
+                    <div class="card-content">
                                     <div class="card-body">
+                    <!-- <form action="{{ route('store.useraddress') }}" method="POST" enctype="multipart/form-data"> -->
+                    <form>
+                                <fieldset>                       
+                                    <!-- @csrf -->
                                         <div class="row">
                                             <div class="col-md-6 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="checkout-name">ชื่อจริง:</label>
-                                                    <input type="text" id="checkout-name" class="form-control required" name="fname">
+                                                    <input type="text" class="form-control required" 
+                                                    name="name">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="checkout-number">หมายเลขโทรศัพท์:</label>
-                                                    <input type="number" id="checkout-number" class="form-control required" name="mnumber">
+                                                    <input type="number" class="form-control required" 
+                                                    name="phone">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="checkout-apt-number">บ้านเลขที่:</label>
-                                                    <input type="number" id="checkout-apt-number" class="form-control required" name="apt-number">
+                                                    <input type="text" class="form-control required" 
+                                                    name="address">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="checkout-landmark">รายละเอียดเพิ่มเติม:</label>
-                                                    <input type="text" id="checkout-landmark" class="form-control required" name="landmark">
+                                                    <input type="text" class="form-control required" 
+                                                    name="address_addon">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="checkout-city">ตำบล/อำเภอ:</label>
-                                                    <input type="text" id="checkout-city" class="form-control required" name="city">
+                                                    <input type="text" class="form-control required"
+                                                     name="district">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="checkout-pincode">รหัสไปรษณีย์:</label>
-                                                    <input type="number" id="checkout-pincode" class="form-control required" name="pincode">
+
+                                                    <input type="number" class="form-control required" 
+                                                    name="province_code">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="checkout-state">จังหวัด:</label>
-                                                    <input type="text" id="checkout-state" class="form-control required" name="state">
+                                                    <input type="text" class="form-control required" 
+                                                    name="province">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="add-type">ประเภทสถานที่:</label>
-                                                    <select class="form-control" id="add-type">
+                                                    <select class="form-control" name="address_type">
                                                         <option>บ้าน</option>
                                                         <option>สำนักงาน</option>
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-6 offset-md-6">
-                                                <div class="btn btn-primary delivery-address float-right">
-                                                    <a href="{{ route('checkout') }}" style="color:#FFFFFF;"> บันทึกที่อยู่ และ ตรวจสอบการชำระเงิน</a>
-                                                </div>
-                                            </div>
                                         </div>
+                                        <div class="btn btn-primary btn-block delivery-address">
+                                             <a href="{{ route('checkout') }}" style="color:#FFFFFF;"> ดำเนินการต่อ</a></div>
+                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="customer-card">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title">John Doe</h4>
+                                </fieldset>
+                                <!-- <button style="background-color: #257d0f ;color:white" class="btn" 
+                                href="{{ route('checkout') }}" 
+                                type="submit">บันทึกที่อยู่และชำระเงิน</button> -->
+                                
+                                 </form>
+                                 <!-- Checkout Customer Address Ends -->
+               
+                <div class="row justify-content-center">
+                         <div class="col-12">
+                     <section id="ecommerce-products" class="grid-view">
+                        <div class="row">
+
+                   @forEach ($showAddress as $add)
+                        <div class="col" style="margin-top: 25px;" >
+                        <div class="card ecommerce-card" style="width: 24rem">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="item-wrapper">
+                                       
+                                        <div class="card-header">
+                                        <h4 class="card-title">{{ $add->name }}</h4>
+                                  
+                                        </div>
+                                        
                                     </div>
-                                    <div class="card-content">
-                                        <div class="card-body actions">
-                                            <p class="mb-0">9447 Glen Eagles Drive</p>
-                                            <p>Lewis Center, OH 43035</p>
-                                            <p>UTC-5: Eastern Standard Time (EST) </p>
-                                            <p>202-555-0140</p>
-                                            <hr>
+                                    <hr>
+                                    <p class="mb-0">{{ $add->address }}  {{ $add->address_addon}}</p>
+                                    <div>
+                                    <p class="mb-0">{{ $add->district }} {{ $add->province }}</p>
+                                    </div>
+                                    <div>
+                                    <p>{{ $add->province_code }} </p>
+                                    </div>
+                                    <div>
+                                    <p>{{ $add->phone }}</p>
+                                    </div>
+                                    <hr>
                                             <div class="btn btn-primary btn-block delivery-address">
-                                                <a href="{{ route('checkout') }}" style="color:#FFFFFF;">เลือกที่อยู่นี้</a>
-                                                </div>
-                                        </div>
-                                    </div>
+                                             <a href="{{ route('checkout') }}" style="color:#FFFFFF;"> เลือกที่อยู่นี้</a></div>
+                                </div>
+                                
+                                    
                                 </div>
                             </div>
-                        </section>
-                    </fieldset>
+                        </div>
+                        </div>
+                        @endforeach
+      
+                        </div>
+                    </section>
+                        </div>
+                
 
-                    <!-- Checkout Customer Address Ends -->
-                </form>
-
+            </div>
             </div>
         </div>
     </div>
-    </div>
+    </div
+                                 </div>
+                                 </div>
+                                 </div>
+                                 </div>
+</section>
+</fieldset>
+ </form>
+                    >
     @endsection
 
 
